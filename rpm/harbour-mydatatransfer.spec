@@ -20,8 +20,8 @@ License:        GPLv3
 Packager:       fravaccaro <fravaccaro@jollacommunity.it>
 URL:            https://github.com/harbour-mydatatransfer
 Source0:        %{name}-%{version}.tar.bz2
-Source100:      harbour-themepack-xenlism-wildfire.yaml
-Requires:       sailfishsilica-qt5 >= 0.10.9, sailfish-version >= 3.2.0, rsync, sshpass
+Source100:      harbour-mydatatransfer.yaml
+Requires:       sailfishsilica-qt5 >= 0.10.9, sailfish-version >= 3.0.3, rsync, sshpass
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)

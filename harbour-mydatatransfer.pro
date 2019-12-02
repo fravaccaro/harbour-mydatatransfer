@@ -1,37 +1,30 @@
-TARGET = harbour-themepack-xenlism-wildfire
+TARGET = harbour-mydatatransfer
 
-MY_FILES = \
-other/fetchicons.sh \
-other/coverbg.png \
-other/appinfo.png
+scripts.files = scripts/*
+scripts.path = $$PREFIX/share/$$TARGET/scripts
 
-OTHER_SOURCES += $$MY_FILES
-
-my_resources.path = $$PREFIX/share/$$TARGET
-my_resources.files = $$MY_FILES
+images.files = images/*
+images.path = $$PREFIX/share/$$TARGET/images
 
 appicons.files = appicons/*
 appicons.path = /usr/share/icons/hicolor/
 
-themepack.files = theme/*
-themepack.path = $$PREFIX/share/$$TARGET
-
-INSTALLS += my_resources appicons themepack
+INSTALLS += scripts images appicons
 
 CONFIG += sailfishapp c++11
 
 SOURCES += \
     src/spawner.cpp \
-    src/themepack.cpp \
+    src/mydatatransfer.cpp \
     src/main.cpp
 
-OTHER_FILES += qml/harbour-themepack-xenlism-wildfire.qml \
-    qml/cover/CoverPage.qml \
+OTHER_FILES += \
+    qml/harbour-mydatatransfer.qml \
     qml/components/*.qml \
-    rpm/harbour-themepack-xenlism-wildfire.spec \
-    rpm/harbour-themepack-xenlism-wildfire.yaml \
-    harbour-themepack-xenlism-wildfire.desktop \
-    qml/pages/FirstPage.qml
+    qml/cover/*.qml \
+    qml/pages/*.qml \
+    rpm/* \
+    harbour-mydatatransfer.desktop \
 
 SAILFISHAPP_ICONS = 86x86 108x108 128x128 172x172
 
@@ -41,7 +34,4 @@ TRANSLATIONS +=  translations/*.ts
 
 HEADERS += \
     src/spawner.h \
-    src/themepack.h
-
-DISTFILES += \
-    rpm/harbour-themepack-xenlism-wildfire.changes
+    src/mydatatransfer.h

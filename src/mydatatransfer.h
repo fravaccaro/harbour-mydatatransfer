@@ -1,22 +1,24 @@
-#ifndef THEMEPACK_H
-#define THEMEPACK_H
+#ifndef MYDATATRANSFER_H
+#define MYDATATRANSFER_H
 
 #include <QObject>
 
-class ThemePack : public QObject
+class MyDataTransfer : public QObject
 {
     Q_OBJECT
 
     public:
-        explicit ThemePack(QObject* parent = 0);
+        explicit MyDataTransfer(QObject* parent = 0);
 
     public slots:
         QString whoami() const;                         // function to test what user runs app
-        void fetchIcons() const;
+        void backup() const;
+        void restore(const QString& filename);
+        void transfer(const QString& ipaddress, const QString& password);
 
     signals:
-        void iconsFetched();
+        void actionDone();
 };
 
-#endif // THEMEPACK_H
+#endif // MYDATATRANSFER_H
 

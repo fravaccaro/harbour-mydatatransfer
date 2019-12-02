@@ -4,87 +4,70 @@
 <context>
     <name>FirstPage</name>
     <message>
-        <source>Sources</source>
+        <source>Backup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Icon request</source>
+        <source>Backuping</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>From here you can request missing icons for your favorite apps.</source>
+        <source>Restore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This will open your e-mail client, from which you can send me the name of the apps you would like to be included in this theme.</source>
+        <source>File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Request icons</source>
+        <source>None</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Developers</source>
+        <source>Select backup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>If you want to create a theme compatible with UI Themer, please read the documentation.</source>
+        <source>Restoring backup</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Documentation</source>
+        <source>My Data Transfer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Support</source>
+        <source>Select and restore an app data backup previously saved.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>If you like my work and want to buy me a beer, feel free to do it!</source>
+        <source>Transfer</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Donate</source>
+        <source>Transfering</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Translations</source>
+        <source>IP address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Request a new language or contribute to existing languages on the Transifex project page.</source>
+        <source>Password</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Transifex</source>
+        <source>Transfer to a new device</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>By requesting new icons, you accept sending the name of the unthemed apps installed on your device, along with your e-mail address. This data will be used by me only for the intended purpose and NEVER disclosed to thirdy parties. Your app names and e-mail address will be deleted right after.</source>
+        <source>Save all your app data and restore them later on. The save file will be saved into your &lt;i&gt;home&lt;/i&gt; directory.</source>
         <translation type="unfinished"></translation>
     </message>
+</context>
+<context>
+    <name>Notification</name>
     <message>
-        <source>If you plan to request icons, please consider to donate! It helps me staying motivated and maintaining the project.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Xenlism Wildfire</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thank you for installing Xenlism Wildfire!</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Released under the GNU GPLv3 license. Based on &lt;a href=&apos;https://github.com/xenlism/wildfire&apos;&gt;Xenlism Wildfire&lt;/a&gt;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Credits</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Keyboard navigation based on the one on &lt;a href=&apos;https://github.com/Wunderfitz/harbour-piepmatz&apos;&gt;Piepmatz&lt;/a&gt; by Sebastian Wolf.</source>
+        <source>Settings applied.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

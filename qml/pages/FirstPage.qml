@@ -1,13 +1,14 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
-import uithemer.themescripts 1.0
+import Sailfish.Pickers 1.0
+import mydatatransfer.scripts 1.0
 import "../components"
 
 Page
 {
     id: firstpage
     focus: true
-    ThemePack { id: themePack }
+    MyDataTransfer { id: mydatatransfer }
 
 
     Keys.onPressed: {
@@ -38,15 +39,20 @@ Page
     }
 
     BusyState { id: busyindicator; }
+    RemorsePopup { id: remorsepopup }
+    Notification { id: notification }
+    property string selectedBackupFile
+    property string selectedBackupFilePath
 
     Connections
     {
         function notify() {
             busyindicator.running = false;
+            notification.publish();
         }
 
-        target: themePack
-        onIconsFetched: notify()
+        target: mydatatransfer
+        onActionDone: notify()
     }
 
     SilicaFlickable
@@ -64,152 +70,106 @@ Page
             width: parent.width
             spacing: Theme.paddingMedium
 
-           PageHeader { title: qsTr("Xenlism Wildfire") }
+           PageHeader { title: qsTr("My Data Transfer") }
 
-            Item {
-                height: appicon.height + Theme.paddingMedium
-                width: parent.width
 
-                Image { id: appicon; anchors.horizontalCenter: parent.horizontalCenter; source: "../../appinfo.png" }
-            }
+           SectionHeader { text: qsTr("Backup") }
 
-            LabelText {
-                text: qsTr("Thank you for installing Xenlism Wildfire!")
-            }
+           LabelText {
+               text: qsTr("Save all your app data and restore them later on. The save file will be saved into your <i>home</i> directory.")
+           }
 
-            LabelText {
-                text: qsTr("Released under the GNU GPLv3 license. Based on <a href='https://github.com/xenlism/wildfire'>Xenlism Wildfire</a>.")
-            }
+           LabelSpacer { }
 
-            LabelSpacer { }
-
-            Button {
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Sources")
-                onClicked: Qt.openUrlExternally("https://uithemer.github.io/harbour-themepack-xenlism-wildfire/")
-            }
-
-            SectionHeader { text: qsTr("Icon request") }
-
-            LabelText {
-                text: qsTr("From here you can request missing icons for your favorite apps.")
-            }
-
-            LabelText {
-                text: qsTr("This will open your e-mail client, from which you can send me the name of the apps you would like to be included in this theme.")
-             }
-
-            LabelText {
-                text: qsTr("By requesting new icons, you accept sending the name of the unthemed apps installed on your device, along with your e-mail address. This data will be used by me only for the intended purpose and NEVER disclosed to thirdy parties. Your app names and e-mail address will be deleted right after.")
-             }
-
-            LabelText {
-                text: qsTr("If you plan to request icons, please consider to donate! It helps me staying motivated and maintaining the project.")
-             }
-
-            LabelSpacer { }
-
-            Button {
-                anchors.horizontalCenter: parent.horizontalCenter
-                text: qsTr("Request icons")
-                onClicked: {
-                        busyindicator.running = true;
-                        themePack.fetchIcons();
-                }
-            }
-
-            SectionHeader { text: qsTr("Developers") }
-
-            LabelText {
-                  text: qsTr("If you want to create a theme compatible with UI Themer, please read the documentation.")
+           Button {
+               anchors.horizontalCenter: parent.horizontalCenter
+               text: qsTr("Backup")
+               onClicked: {
+                   remorsepopup.execute(qsTr("Backuping"), function() {
+                       busyindicator.running = true;
+                       mydatatransfer.backup();
+                   });
                }
+           }
 
-            LabelSpacer { }
+           SectionHeader { text: qsTr("Restore") }
 
-              Button {
-                  anchors.horizontalCenter: parent.horizontalCenter
-                  text: qsTr("Documentation")
-                  onClicked: Qt.openUrlExternally("https://uithemer.github.io/themepacksupport-sailfishos/docs/getstarted.html")
-              }
+           ValueButton {
+               label: qsTr("File")
+               description: qsTr("Select and restore an app data backup previously saved.")
+               value: selectedBackupFile ? selectedBackupFile : qsTr("None")
+               onClicked: pageStack.push(backupFilePickerPage)
+           }
 
-              SectionHeader { text: qsTr("Support") }
-
-              LabelText {
-                  text: qsTr("If you like my work and want to buy me a beer, feel free to do it!")
-              }
-
-              LabelSpacer { }
-
-              Button {
-                  anchors.horizontalCenter: parent.horizontalCenter
-                  text: qsTr("Donate")
-                  onClicked: Qt.openUrlExternally("https://www.paypal.me/fravaccaro")
-              }
-
-              SectionHeader { text: qsTr("Credits") }
-
-              LabelText {
-                  text: qsTr("Keyboard navigation based on the one on <a href='https://github.com/Wunderfitz/harbour-piepmatz'>Piepmatz</a> by Sebastian Wolf.")
+           Component {
+               id: backupFilePickerPage
+               FilePickerPage {
+                   nameFilters: [ '*.mydatatransfer' ]
+                   title: qsTr("Select backup")
+                   onSelectedContentPropertiesChanged: {
+                       firstpage.selectedBackupFile = selectedContentProperties.fileName
+                       firstpage.selectedBackupFilePath = selectedContentProperties.filePath
+                   }
                }
+           }
 
-              SectionHeader { text: qsTr("Translations") }
+           Button {
+               anchors.horizontalCenter: parent.horizontalCenter
+               text: qsTr("Restore")
+               enabled: selectedBackupFile ? true : false
+               onClicked: {
+                   remorsepopup.execute(qsTr("Restoring backup"), function() {
+                       busyindicator.running = true;
+                       mydatatransfer.restore(firstpage.selectedBackupFilePath);
+                   });
+               }
+           }
 
-              DetailItem {
-                  label: "Deutsch"
-                  value: "Sailfishman"
-              }
 
-              DetailItem {
-                  label: "Français"
-                  value: "Jordi"
-              }
+           SectionHeader { text: qsTr("Transfer to a new device") }
 
-              DetailItem {
-                  label: "Italiano"
-                  value: "Francesco Vaccaro"
-              }
+           TextField {
+               id: ipAddress
+               placeholderText: qsTr("IP address")
+               label: qsTr("IP address")
+               width: parent.width
+               validator: RegExpValidator {
+                   regExp: /^((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/
+               }
+               EnterKey.enabled: acceptableInput
+               inputMethodHints: Qt.ImhNoPredictiveText
+               EnterKey.iconSource: "image://theme/icon-m-enter-next"
+               EnterKey.onClicked: passwordField.focus = true
+           }
 
-              DetailItem {
-                  label: "Nederlands"
-                  value: "Nathan Follens"
-              }
+           PasswordField {
+               id: passwordField
+               placeholderText: qsTr("Password")
+               label: qsTr("Password")
+               width: parent.width
+               EnterKey.enabled: text.length > 0
+               EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+               onClicked: {
+                   remorsepopup.execute(qsTr("Transfering"), function() {
+                       busyindicator.running = true;
+                       mydatatransfer.transfer(ipAddress.text, passwordField.text);
+                   });
+               }
+           }
 
-              DetailItem {
-                  label: "Neerlandais (Belgique)"
-                  value: "Nathan Follens"
-              }
+           Button {
+               enabled: ( ipAddress.acceptableInput ) && ( passwordField.text.length > 0 )
+               anchors.horizontalCenter: parent.horizontalCenter
+               text: qsTr("Transfer")
+               onClicked: {
+                   remorsepopup.execute(qsTr("Transfering"), function() {
+                       busyindicator.running = true;
+                       mydatatransfer.transfer(ipAddress.text, passwordField.text);
+                   });
+               }
+           }
 
-              DetailItem {
-                  label: "Polski"
-                  value: "kloszes"
-              }
 
-              DetailItem {
-                  label: "Slovenščina"
-                  value: "Boštjan Štrumbelj"
-              }
-
-              DetailItem {
-                  label: "Zhōngwén (Chinese)"
-                  value: "涛 匡"
-              }
-
-              LabelText {
-                  text: qsTr("Request a new language or contribute to existing languages on the Transifex project page.")
-              }
-
-              LabelSpacer { }
-
-              Button {
-                  anchors.horizontalCenter: parent.horizontalCenter
-                  text: qsTr("Transifex")
-                  onClicked: Qt.openUrlExternally("https://www.transifex.com/fravaccaro/xenlism-wildfire")
-              }
-
-              Item {
-                  width: parent.width
-                  height: Theme.paddingLarge
-              }
 
         }
 

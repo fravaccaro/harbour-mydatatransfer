@@ -12,16 +12,16 @@
 #include <QQmlContext>
 #include <QGuiApplication>
 #include <QFileSystemWatcher>
-#include "themepack.h"
+#include "mydatatransfer.h"
 
 int main(int argc, char *argv[])
 {
 
     QGuiApplication *app = SailfishApp::application(argc,argv);
     QQuickView *view = SailfishApp::createView();
-    QString qml = QString("qml/harbour-themepack-xenlism-wildfire.qml");
+    QString qml = QString("qml/harbour-mydatatransfer.qml");
 
-    qmlRegisterType<ThemePack>("uithemer.themescripts", 1, 0, "ThemePack");
+    qmlRegisterType<MyDataTransfer>("mydatatransfer.scripts", 1, 0, "MyDataTransfer");
 
     view->setSource(SailfishApp::pathTo(qml));
     view->show();

@@ -7,7 +7,7 @@ CoverBackground
     {
         anchors.fill: parent
         fillMode: Image.PreserveAspectFit
-        source: "../../coverbg.png"
+        source: "../../images/coverbg.png"
         opacity: 0.6
         horizontalAlignment: Image.AlignHCenter
         verticalAlignment: Image.AlignVCenter
