@@ -42,12 +42,6 @@ Page
             pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"));
             event.accepted = true;
         }
-
-        if (event.key === Qt.Key_G) {
-            pageStack.push(Qt.resolvedUrl("GuidePage.qml"));
-            event.accepted = true;
-        }
-
     }
 
     SilicaFlickable
@@ -68,7 +62,7 @@ Page
             Item {
                 height: appicon.height + Theme.paddingMedium
                 width: parent.width
-                Image { id: appicon; anchors.horizontalCenter: parent.horizontalCenter; source: "../../images/appinfo.png" }
+                Image { id: appicon; width: parent.width/3; fillMode: Image.PreserveAspectFit; anchors.horizontalCenter: parent.horizontalCenter; source: "../../images/appinfo.png" }
             }
 
             Label {
@@ -78,7 +72,7 @@ Page
                 text: "My Data Transfer 0.0.1" }
 
             LabelText {
-                text: qsTr("Backup and transfer app data, documents, music, pictures and videos.")
+                text: qsTr("Backup and transfer app data, documents, music, pictures and videos on your Sailfish OS devices.")
             }
 
             LabelText {
@@ -124,7 +118,7 @@ Page
               SectionHeader { text: qsTr("Credits") }
 
               LabelText {
-                  text: qsTr("Part of this app is based on <a href='https://github.com/RikudouSage/sailfish-iconpacksupport-gui'>Icon pack support GUI</a> by RikudouSennin.")
+                  text: qsTr("Thanks to flypigahoy for his ispiring blog post about copying settings and files over a new device.")
                }
 
               LabelText {
@@ -132,23 +126,7 @@ Page
                }
 
               LabelText {
-                  text: qsTr("App icon by") + " <a href='http://www.freevectors.com/blue-painting-roller/'>Free Vectors</a>."
-               }
-
-              LabelText {
                   text: qsTr("Iconography by") + " <a href='https://www.flaticon.com/authors/retinaicons'>Retinaicons</a>."
-               }
-
-              LabelText {
-                  text: qsTr("Thanks to Dax89 for helping with C++ and QML code, this app would not exist without him.")
-               }
-
-              LabelText {
-                  text: qsTr("Thanks to Eugenio_g7 for helping with the <i>One-click restore</i> service.")
-               }
-
-              LabelText {
-                  text: qsTr("Thanks to LQS for helping with the Android DPI on the Xperia XA2.")
                }
 
               LabelText {

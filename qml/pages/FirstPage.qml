@@ -36,6 +36,11 @@ Page
             flickable.scrollToTop();
             event.accepted = true;
         }
+
+        if (event.key === Qt.Key_A) {
+            pageStack.push(Qt.resolvedUrl("AboutPage.qml"));
+            event.accepted = true;
+        }
     }
 
     BusyState { id: busyindicator; }
@@ -125,10 +130,6 @@ Page
             MenuItem {
                 text: qsTr("About")
                 onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
-            }
-            MenuItem {
-                text: qsTr("Usage guide")
-                onClicked: pageStack.push(Qt.resolvedUrl("GuidePage.qml"))
             }
         }
 
@@ -293,7 +294,11 @@ Page
            SectionHeader { text: qsTr("Transfer to a new device") }
 
            LabelText {
-               text: qsTr("Insert your new device IP address and password, then choose what to transfer. NOTE: you need the developer mode active and a root password set in order to be able to use this option.")
+               text: qsTr("Insert your new device IP address and password, then choose what to transfer. Both of your devices need to be on the same WLAN network.")
+           }
+
+           LabelText {
+               text: qsTr("NOTE: you need the developer mode active and a root password set on your new device in order to be able to use this option.")
            }
 
            TextField {

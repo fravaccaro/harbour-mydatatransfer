@@ -12,16 +12,16 @@ Name:       harbour-mydatatransfer
 %{!?qtc_qmake5:%define qtc_qmake5 %qmake5}
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
-Summary:        My data transfer
+Summary:        My Data Transfer
 Version:        0.0.1
-Release:        1
+Release:        4
 Group:          Qt/Qt
 License:        GPLv3
 Packager:       fravaccaro <fravaccaro@jollacommunity.it>
-URL:            https://github.com/harbour-mydatatransfer
+URL:            https://github.com/fravaccaro/harbour-mydatatransfer
 Source0:        %{name}-%{version}.tar.bz2
 Source100:      harbour-mydatatransfer.yaml
-Requires:       sailfishsilica-qt5 >= 0.10.9, sailfish-version >= 3.0.3, rsync, sshpass
+Requires:       sailfishsilica-qt5 >= 0.10.9, sailfish-version >= 3.2.0, rsync, sshpass
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
@@ -29,7 +29,7 @@ BuildRequires:  pkgconfig(Qt5Quick)
 BuildRequires:  desktop-file-utils
 
 %description
-Xenlism Wildfire theme pack for Sailfish OS.
+Backup and transfer app data, documents, music, pictures and videos on your Sailfish OS devices.
 
 
 %prep

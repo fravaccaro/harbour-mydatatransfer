@@ -40,31 +40,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Part of this app is based on &lt;a href=&apos;https://github.com/RikudouSage/sailfish-iconpacksupport-gui&apos;&gt;Icon pack support GUI&lt;/a&gt; by RikudouSennin.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Keyboard navigation based on &lt;a href=&apos;https://github.com/Wunderfitz/harbour-piepmatz&apos;&gt;Piepmatz&lt;/a&gt; by Sebastian Wolf.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>App icon by</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Iconography by</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thanks to Dax89 for helping with C++ and QML code, this app would not exist without him.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thanks to Eugenio_g7 for helping with the &lt;i&gt;One-click restore&lt;/i&gt; service.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Thanks to LQS for helping with the Android DPI on the Xperia XA2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -80,7 +60,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Backup and transfer app data, documents, music, pictures and videos.</source>
+        <source>Backup and transfer app data, documents, music, pictures and videos on your Sailfish OS devices.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thanks to flypigahoy for his ispiring blog post about copying settings and files over a new device.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -167,10 +151,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Insert your new device IP address and password, then choose what to transfer. NOTE: you need the developer mode active and a root password set in order to be able to use this option.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Transferring</source>
         <translation type="unfinished"></translation>
     </message>
@@ -191,86 +171,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Usage guide</source>
-        <translation type="unfinished"></translation>
-    </message>
-</context>
-<context>
-    <name>GuidePage</name>
-    <message>
-        <source>Usage guide</source>
+        <source>NOTE: you need the developer mode active and a root password set on your new device in order to be able to use this option.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>UI Themer lets you customize icons, fonts and pixel density in Sailfish OS.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remember to unapply themes and display density customizations before updating your system. In case you forgot, you may need to use the options provided in the &lt;i&gt;Recovery&lt;/i&gt; page or uninstall and reinstall Theme pack support e UI Themer.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Themes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The &lt;i&gt;Themes&lt;/i&gt; page lets you customize icons and fonts via thirdy party themes. The page lists the themes you have currently installed (e.g. from OpenRepos). To apply them, tap on a theme of your choice and then select what you want to use from that theme - if the theme contains different font weights, you can choose the default one to use for the UI. You can also combine different themes, so for example you can use icons from a theme and fonts from another. To revert to the default settings, you can use the restore option from the pulley menu.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>If you have Storeman installed, you can quickly look for compatible themes by using the &lt;i&gt;Download&lt;/i&gt; icon in the main page.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>One-click restore</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>UI Themer customizations must be reverted before performing a system update. With &lt;i&gt;One-click restore&lt;/i&gt; you can automate this process and restore icons, fonts and display density settings with just one click.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Keyboard shortcuts</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>UI Themer can be navigated via a physical keyboard, using convenient shortcuts.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Press &lt;b&gt;H&lt;/b&gt; for the home page.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Press &lt;b&gt;O&lt;/b&gt; for the options page.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Press &lt;b&gt;G&lt;/b&gt; for the usage guide.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Press &lt;b&gt;A&lt;/b&gt; for the about page.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Press &lt;b&gt;B&lt;/b&gt; to go back to the previous page.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>You can quickly restart the homescreen after you applied a setting by pressing &lt;b&gt;R&lt;/b&gt;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>You can cancel a countdown or a dialog by pressing &lt;b&gt;C&lt;/b&gt;.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Further help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>If you still can&apos;t get the help you need, you can open an issue on</source>
+        <source>Insert your new device IP address and password, then choose what to transfer. Both of your devices need to be on the same WLAN network.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
