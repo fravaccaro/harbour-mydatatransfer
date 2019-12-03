@@ -2,7 +2,13 @@
 
 ipaddress=$1
 user=nemo
-password='$2'
+password=\'$2\'
+apps=$3
+documents=$4
+downloads=$5
+music=$6
+pictures=$7
+videos=$8
 
 sshpass -p $password \
 	rsync --progress -avz -e \
@@ -11,6 +17,6 @@ sshpass -p $password \
 
 sshpass -p $password \
 	ssh -o StrictHostKeyChecking=no $user@$ipaddress \
-	'tar -xvf ./backup.mydatatransfer -C .'
+	'bash -s' < restore.sh ~/backup.mydatatransfer $apps $documents $downloads $music $pictures $videos
 
 exit 0

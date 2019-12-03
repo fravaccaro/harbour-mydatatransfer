@@ -11,42 +11,41 @@ videos=$7
 echo "RESTORING MYDATATRANSFER BACKUP..."
 
 cd /home/nemo
-mkdir -p PROVA
 
 if [ "$apps" = 1 ]; then
 	echo "APPS RESTORING..."
 	# restore config and local folders
-	tar -xvf $name -C ./PROVA .config && tar -xvf $name -C ./PROVA .local
+	tar -xvf $name -C ./ .config && tar -xvf $name -C ./ .local
 fi
 
 if [ "$documents" = 1 ]; then
 	echo "DOCUMENTS RESTORING..."
 	# restore documents
-	tar -xvf $name -C ./PROVA Documents
+	tar -xvf $name -C ./ Documents
 fi
 
 if [ "$downloads" = 1 ]; then
 	echo "DOWLOADS RESTORING..."
 	# restore downloads
-	tar -xvf $name -C ./PROVA Downloads
+	tar -xvf $name -C ./ Downloads
 fi
 
 if [ "$music" = 1 ]; then
 	echo "MUSIC RESTORING..."
 	# restore music
-	tar -xvf $name -C ./PROVA Music
+	tar -xvf $name -C ./ Music
 fi
 
 if [ "$pictures" = 1 ]; then
 	echo "PICTURES RESTORING..."
 	# restore pictures
-	tar -xvf $name -C ./PROVA Pictures
+	tar -xvf $name -C ./ Pictures
 fi
 
 if [ "$videos" = 1 ]; then
 	echo "VIDEOS RESTORING..."
 	# restore videos
-	tar -xvf $name -C ./PROVA Videos
+	tar -xvf $name -C ./ Videos
 fi
 
 echo "DONE!"

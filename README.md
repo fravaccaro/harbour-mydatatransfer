@@ -2,37 +2,30 @@
 layout: default
 title: Home
 nav_order: 1
-description: "Xenlism Wildfire for Sailfish OS"
+description: "My Data Transfer"
 permalink: /
 ---
 
 
-# Xenlism Wildfire for Sailfish OS
+# My Data Transfer
 
-Xenlism Wildfire for Sailfish OS.
+Backup and transfer app data, documents, music, pictures and videos.
 
-[![GitHub license](https://img.shields.io/github/license/uithemer/harbour-themepack-xenlism-wildfire.svg)](https://github.com/uithemer/harbour-themepack-xenlism-wildfire/blob/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/uithemer/harbour-themepack-xenlism-wildfire.svg)](https://github.com/uithemer/harbour-themepack-xenlism-wildfire/issues) [![GitHub releases](https://img.shields.io/github/release/uithemer/harbour-themepack-xenlism-wildfire.svg)](https://github.com/uithemer/harbour-themepack-xenlism-wildfire/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/fravaccaro)
+[![GitHub license](https://img.shields.io/github/license/fravaccaro/harbour-mydatatransfer.svg)](https://github.com/fravaccaro/harbour-mydatatransfer/blob/master/LICENSE) [![GitHub issues](https://img.shields.io/github/issues/fravaccaro/harbour-mydatatransfer.svg)](https://github.com/fravaccaro/harbour-mydatatransfer/issues) [![GitHub releases](https://img.shields.io/github/release/fravaccaro/harbour-mydatatransfer.svg)](https://github.com/fravaccaro/harbour-mydatatransfer/releases/latest) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/fravaccaro)
 
-## Request a new icon
-
-You can request a new icon via the theme companion app or by [opening an issue](https://github.com/uithemer/harbour-themepack-xenlism-wildfire/issues).
-
-## Create custom theme packs
-
-Documentation on how to create theme packs available [here](https://uithemer.github.io/themepacksupport-sailfishos/docs/getstarted).
 
 ## Translate
 
 Languages supported:
 
-[![Languages supported](https://www.transifex.com/_/charts/redirects/fravaccaro/xenlism-wildfire/image_png/harbour-themepack-xenlism-wildfirets)](https://www.transifex.com/fravaccaro/xenlism-wildfire/dashboard/)
+[![Languages supported](https://www.transifex.com/_/charts/redirects/fravaccaro/my-data-transfer/image_png/harbour-mydatatransferts)](https://www.transifex.com/fravaccaro/my-data-transfer/dashboard/)
 
-Request a new language or contribute to existing languages on the [Transifex project page](https://www.transifex.com/fravaccaro/xenlism-wildfire/dashboard/).
+Request a new language or contribute to existing languages on the [Transifex project page](https://www.transifex.com/fravaccaro/my-data-transfer/dashboard/).
 
 ## Builds
 
-Builds available [here](https://openrepos.net/content/fravaccaro/xenlism-wildfire-icons).
+Builds available [here](https://openrepos.net/content/fravaccaro/my-data-transfer).
 
 ## Credits
 
-Thanks to [Xenlism](https://github.com/xenlism/wildfire).
+

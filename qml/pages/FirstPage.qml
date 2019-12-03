@@ -41,6 +41,24 @@ Page
     BusyState { id: busyindicator; }
     RemorsePopup { id: remorsepopup }
     Notification { id: notification }
+    property alias appsBackup: itsappsbackup.checked
+    property alias documentsBackup: itsdocumentsbackup.checked
+    property alias downloadsBackup: itsdownloadsbackup.checked
+    property alias musicBackup: itsmusicbackup.checked
+    property alias picturesBackup: itspicturesbackup.checked
+    property alias videosBackup: itsvideosbackup.checked
+    property alias appsRestore: itsappsrestore.checked
+    property alias documentsRestore: itsdocumentsrestore.checked
+    property alias downloadsRestore: itsdownloadsrestore.checked
+    property alias musicRestore: itsmusicrestore.checked
+    property alias picturesRestore: itspicturesrestore.checked
+    property alias videosRestore: itsvideosrestore.checked
+    property alias appsTransfer: itsappstransfer.checked
+    property alias documentsTransfer: itsdocumentstransfer.checked
+    property alias downloadsTransfer: itsdownloadstransfer.checked
+    property alias musicTransfer: itsmusictransfer.checked
+    property alias picturesTransfer: itspicturestransfer.checked
+    property alias videosTransfer: itsvideostransfer.checked
     property string selectedBackupFile
     property string selectedBackupFilePath
 
@@ -81,13 +99,62 @@ Page
 
            LabelSpacer { }
 
+            IconTextSwitch {
+                id: itsappsbackup
+                automaticCheck: true
+                text: qsTr("Apps")
+                onClicked: { appsBackup = itsappsbackup.checked }
+            }
+
+            IconTextSwitch {
+                id: itsappsbackup
+                automaticCheck: true
+                text: qsTr("Apps")
+                onClicked: { appsBackup = itsappsbackup.checked }
+            }
+
+            IconTextSwitch {
+                id: itsdocumentsbackup
+                automaticCheck: true
+                text: qsTr("Documents")
+                onClicked: { documentsBackup = itsdocumentsbackup.checked }
+            }
+
+            IconTextSwitch {
+                id: itsdownloadsbackup
+                automaticCheck: true
+                text: qsTr("Downloads")
+                onClicked: { downloadsBackup = itsdownloadsbackup.checked }
+            }
+
+            IconTextSwitch {
+                id: itsmusicbackup
+                automaticCheck: true
+                text: qsTr("Music")
+                onClicked: { musicBackup = itsmusicbackup.checked }
+            }
+
+            IconTextSwitch {
+                id: itspicturesbackup
+                automaticCheck: true
+                text: qsTr("Pictures")
+                onClicked: { picturesBackup = itspicturesbackup.checked }
+            }
+
+            IconTextSwitch {
+                id: itsvideosbackup
+                automaticCheck: true
+                text: qsTr("Videos")
+                onClicked: { videosBackup = itsvideosbackup.checked }
+            }
+
            Button {
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Backup")
                onClicked: {
                    remorsepopup.execute(qsTr("Backuping"), function() {
                        busyindicator.running = true;
-                       mydatatransfer.backup();
+                       mydatatransfer.backup(appsBackup, documentsBackup, downloadsBackup, musicBackup, picturesBackup, videosBackup);
                    });
                }
            }
@@ -113,6 +180,48 @@ Page
                }
            }
 
+            IconTextSwitch {
+                id: itsappsrestore
+                automaticCheck: true
+                text: qsTr("Apps")
+                onClicked: { appsRestore = itsappsrestore.checked }
+            }
+
+            IconTextSwitch {
+                id: itsdocumentsrestore
+                automaticCheck: true
+                text: qsTr("Documents")
+                onClicked: { documentsRestore = itsdocumentsrestore.checked }
+            }
+
+            IconTextSwitch {
+                id: itsdownloadsrestore
+                automaticCheck: true
+                text: qsTr("Downloads")
+                onClicked: { downloadsRestore = itsdownloadsrestore.checked }
+            }
+
+            IconTextSwitch {
+                id: itsmusicrestore
+                automaticCheck: true
+                text: qsTr("Music")
+                onClicked: { musicRestore = itsmusicrestore.checked }
+            }
+
+            IconTextSwitch {
+                id: itspicturesrestore
+                automaticCheck: true
+                text: qsTr("Pictures")
+                onClicked: { picturesRestore = itspicturesrestore.checked }
+            }
+
+            IconTextSwitch {
+                id: itsvideosrestore
+                automaticCheck: true
+                text: qsTr("Videos")
+                onClicked: { videosRestore = itsvideosrestore.checked }
+            }
+
            Button {
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Restore")
@@ -120,11 +229,10 @@ Page
                onClicked: {
                    remorsepopup.execute(qsTr("Restoring backup"), function() {
                        busyindicator.running = true;
-                       mydatatransfer.restore(firstpage.selectedBackupFilePath);
+                       mydatatransfer.restore(firstpage.selectedBackupFilePath, appsRestore, documentsRestore, downloadsRestore, musicRestore, picturesRestore, videosRestore);
                    });
                }
            }
-
 
            SectionHeader { text: qsTr("Transfer to a new device") }
 
@@ -152,10 +260,59 @@ Page
                onClicked: {
                    remorsepopup.execute(qsTr("Transfering"), function() {
                        busyindicator.running = true;
-                       mydatatransfer.transfer(ipAddress.text, passwordField.text);
+                       mydatatransfer.transfer(ipAddress.text, passwordField.text, appsTransfer, documentsTransfer, downloadsTransfer, musicTransfer, picturesTransfer, videosTransfer);
                    });
                }
            }
+
+            IconTextSwitch {
+                id: itsappstransfer
+                automaticCheck: true
+                text: qsTr("Apps")
+                onClicked: { appsTransfer = itsappstransfer.checked }
+            }
+
+            IconTextSwitch {
+                id: itsappstransfer
+                automaticCheck: true
+                text: qsTr("Apps")
+                onClicked: { appsTransfer = itsappstransfer.checked }
+            }
+
+            IconTextSwitch {
+                id: itsdocumentstransfer
+                automaticCheck: true
+                text: qsTr("Documents")
+                onClicked: { documentsTransfer = itsdocumentstransfer.checked }
+            }
+
+            IconTextSwitch {
+                id: itsdownloadstransfer
+                automaticCheck: true
+                text: qsTr("Downloads")
+                onClicked: { downloadsTransfer = itsdownloadstransfer.checked }
+            }
+
+            IconTextSwitch {
+                id: itsmusictransfer
+                automaticCheck: true
+                text: qsTr("Music")
+                onClicked: { musicTransfer = itsmusictransfer.checked }
+            }
+
+            IconTextSwitch {
+                id: itspicturestransfer
+                automaticCheck: true
+                text: qsTr("Pictures")
+                onClicked: { picturesTransfer = itspicturestransfer.checked }
+            }
+
+            IconTextSwitch {
+                id: itsvideostransfer
+                automaticCheck: true
+                text: qsTr("Videos")
+                onClicked: { videosTransfer = itsvideostransfer.checked }
+            }
 
            Button {
                enabled: ( ipAddress.acceptableInput ) && ( passwordField.text.length > 0 )
@@ -164,7 +321,7 @@ Page
                onClicked: {
                    remorsepopup.execute(qsTr("Transfering"), function() {
                        busyindicator.running = true;
-                       mydatatransfer.transfer(ipAddress.text, passwordField.text);
+                       mydatatransfer.transfer(ipAddress.text, passwordField.text, appsTransfer, documentsTransfer, downloadsTransfer, musicTransfer, picturesTransfer, videosTransfer);
                    });
                }
            }
