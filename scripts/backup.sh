@@ -10,7 +10,7 @@ videos=$6
 
 echo "CREATING MYDATATRANSFER BACKUP..."
 
-cd /home/nemo
+cd ~
 
 if [ "$apps" = 1 ]; then
 	echo "APPS BACKUP..."
@@ -29,7 +29,7 @@ if [ "$apps" = 1 ]; then
 	--exclude='.config/user-dirs.dirs' \
 	--exclude='.config/user-dirs.locale' \
 	--exclude='.config/.sailfish-gallery-reindex' \
-	-rvf $name.mydatatransfer .config
+        -rf $name.mydatatransfer .config
 
 	# create archive with local folders, excluding system ones
 	tar --exclude='.local/nemo-transferengine' \
@@ -45,37 +45,37 @@ if [ "$apps" = 1 ]; then
 	--exclude='.local/share/telepathy' \
 	--exclude='.local/share/tracker' \
 	--exclude='.local/share/xt9' \
-	-rvf $name.mydatatransfer .local
+        -rf $name.mydatatransfer .local
 fi
 
 if [ "$documents" = 1 ]; then
 	echo "DOCUMENTS BACKUP..."
 	# create archive with documents
-	tar -rvf $name.mydatatransfer Documents
+        tar -rf $name.mydatatransfer Documents
 fi
 
 if [ "$downloads" = 1 ]; then
 	echo "DOWLOADS BACKUP..."
 	# create archive with downloads
-	tar -rvf $name.mydatatransfer Downloads
+        tar -rf $name.mydatatransfer Downloads
 fi
 
 if [ "$music" = 1 ]; then
 	echo "MUSIC BACKUP..."
 	# create archive with music
-	tar -rvf $name.mydatatransfer Music
+        tar -rf $name.mydatatransfer Music
 fi
 
 if [ "$pictures" = 1 ]; then
 	echo "PICTURES BACKUP..."
 	# create archive with pictures
-	tar -rvf $name.mydatatransfer Pictures
+        tar -rf $name.mydatatransfer Pictures
 fi
 
 if [ "$videos" = 1 ]; then
 	echo "VIDEOS BACKUP..."
 	# create archive with videos
-	tar -rvf $name.mydatatransfer Videos
+        tar -rf $name.mydatatransfer Videos
 fi
 
-echo "DONE!"
+echo "BACKUPED!"

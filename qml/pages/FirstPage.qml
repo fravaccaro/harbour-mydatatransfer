@@ -40,7 +40,39 @@ Page
 
     BusyState { id: busyindicator; }
     RemorsePopup { id: remorsepopup }
-    Notification { id: notification }
+    Notification {
+        id: notifybackup
+        previewBody: qsTr("Backup completed")
+        remoteActions: [ {
+            "name": "default",
+            "service": "org.nemomobile.mydatatransfer",
+            "path": "/done",
+            "iface": "org.nemomobile.mydatatransfer",
+            "method": "backupDone"
+        } ]
+    }
+    Notification {
+        id: notifyrestore
+        previewBody: qsTr("Restore completed")
+        remoteActions: [ {
+            "name": "default",
+            "service": "org.nemomobile.mydatatransfer",
+            "path": "/done",
+            "iface": "org.nemomobile.mydatatransfer",
+            "method": "restoreDone"
+        } ]
+    }
+    Notification {
+        id: notifytransfer
+        previewBody: qsTr("Transfer completed")
+        remoteActions: [ {
+            "name": "default",
+            "service": "org.nemomobile.mydatatransfer",
+            "path": "/done",
+            "iface": "org.nemomobile.mydatatransfer",
+            "method": "transferDone"
+        } ]
+    }
     property alias appsBackup: itsappsbackup.checked
     property alias documentsBackup: itsdocumentsbackup.checked
     property alias downloadsBackup: itsdownloadsbackup.checked
@@ -64,13 +96,19 @@ Page
 
     Connections
     {
-        function notify() {
-            busyindicator.running = false;
-            notification.publish();
-        }
-
         target: mydatatransfer
-        onActionDone: notify()
+        onBackupDone: {
+            busyindicator.running = false;
+            notifybackup.publish();
+        }
+        onRestoreDone: {
+            busyindicator.running = false;
+            notifyrestore.publish();
+        }
+        onTransferDone: {
+            busyindicator.running = false;
+            notifytransfer.publish();
+        }
     }
 
     SilicaFlickable
@@ -82,6 +120,18 @@ Page
         enabled: !busyindicator.running
         opacity: busyindicator.running ? 0.3 : 1.0
 
+
+        PullDownMenu {
+            MenuItem {
+                text: qsTr("About")
+                onClicked: pageStack.push(Qt.resolvedUrl("AboutPage.qml"))
+            }
+            MenuItem {
+                text: qsTr("Usage guide")
+                onClicked: pageStack.push(Qt.resolvedUrl("GuidePage.qml"))
+            }
+        }
+
         Column
         {
             id: content
@@ -90,24 +140,15 @@ Page
 
            PageHeader { title: qsTr("My Data Transfer") }
 
-
            SectionHeader { text: qsTr("Backup") }
 
            LabelText {
-               text: qsTr("Save all your app data and restore them later on. The save file will be saved into your <i>home</i> directory.")
+               text: qsTr("Choose what to backup. The save file will be stored into your <i>home</i> directory.")
            }
 
-           LabelSpacer { }
-
             IconTextSwitch {
                 id: itsappsbackup
-                automaticCheck: true
-                text: qsTr("Apps")
-                onClicked: { appsBackup = itsappsbackup.checked }
-            }
-
-            IconTextSwitch {
-                id: itsappsbackup
+                checked: true
                 automaticCheck: true
                 text: qsTr("Apps")
                 onClicked: { appsBackup = itsappsbackup.checked }
@@ -115,6 +156,7 @@ Page
 
             IconTextSwitch {
                 id: itsdocumentsbackup
+                checked: true
                 automaticCheck: true
                 text: qsTr("Documents")
                 onClicked: { documentsBackup = itsdocumentsbackup.checked }
@@ -122,6 +164,7 @@ Page
 
             IconTextSwitch {
                 id: itsdownloadsbackup
+                checked: true
                 automaticCheck: true
                 text: qsTr("Downloads")
                 onClicked: { downloadsBackup = itsdownloadsbackup.checked }
@@ -129,6 +172,7 @@ Page
 
             IconTextSwitch {
                 id: itsmusicbackup
+                checked: true
                 automaticCheck: true
                 text: qsTr("Music")
                 onClicked: { musicBackup = itsmusicbackup.checked }
@@ -136,6 +180,7 @@ Page
 
             IconTextSwitch {
                 id: itspicturesbackup
+                checked: true
                 automaticCheck: true
                 text: qsTr("Pictures")
                 onClicked: { picturesBackup = itspicturesbackup.checked }
@@ -143,12 +188,14 @@ Page
 
             IconTextSwitch {
                 id: itsvideosbackup
+                checked: true
                 automaticCheck: true
                 text: qsTr("Videos")
                 onClicked: { videosBackup = itsvideosbackup.checked }
             }
 
            Button {
+               enabled: (appsBackup || documentsBackup || downloadsBackup || musicBackup || picturesBackup || videosBackup)
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Backup")
                onClicked: {
@@ -161,9 +208,12 @@ Page
 
            SectionHeader { text: qsTr("Restore") }
 
+           LabelText {
+               text: qsTr("Select a save file and choose what to restore.")
+           }
+
            ValueButton {
                label: qsTr("File")
-               description: qsTr("Select and restore an app data backup previously saved.")
                value: selectedBackupFile ? selectedBackupFile : qsTr("None")
                onClicked: pageStack.push(backupFilePickerPage)
            }
@@ -182,6 +232,7 @@ Page
 
             IconTextSwitch {
                 id: itsappsrestore
+                checked: true
                 automaticCheck: true
                 text: qsTr("Apps")
                 onClicked: { appsRestore = itsappsrestore.checked }
@@ -189,6 +240,7 @@ Page
 
             IconTextSwitch {
                 id: itsdocumentsrestore
+                checked: true
                 automaticCheck: true
                 text: qsTr("Documents")
                 onClicked: { documentsRestore = itsdocumentsrestore.checked }
@@ -196,6 +248,7 @@ Page
 
             IconTextSwitch {
                 id: itsdownloadsrestore
+                checked: true
                 automaticCheck: true
                 text: qsTr("Downloads")
                 onClicked: { downloadsRestore = itsdownloadsrestore.checked }
@@ -203,6 +256,7 @@ Page
 
             IconTextSwitch {
                 id: itsmusicrestore
+                checked: true
                 automaticCheck: true
                 text: qsTr("Music")
                 onClicked: { musicRestore = itsmusicrestore.checked }
@@ -210,6 +264,7 @@ Page
 
             IconTextSwitch {
                 id: itspicturesrestore
+                checked: true
                 automaticCheck: true
                 text: qsTr("Pictures")
                 onClicked: { picturesRestore = itspicturesrestore.checked }
@@ -217,6 +272,7 @@ Page
 
             IconTextSwitch {
                 id: itsvideosrestore
+                checked: true
                 automaticCheck: true
                 text: qsTr("Videos")
                 onClicked: { videosRestore = itsvideosrestore.checked }
@@ -225,7 +281,7 @@ Page
            Button {
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Restore")
-               enabled: selectedBackupFile ? true : false
+               enabled: (selectedBackupFile) && (appsRestore || documentsRestore || downloadsRestore || musicRestore || picturesRestore || videosRestore)
                onClicked: {
                    remorsepopup.execute(qsTr("Restoring backup"), function() {
                        busyindicator.running = true;
@@ -235,6 +291,10 @@ Page
            }
 
            SectionHeader { text: qsTr("Transfer to a new device") }
+
+           LabelText {
+               text: qsTr("Insert your new device IP address and password, then choose what to transfer. NOTE: you need the developer mode active and a root password set in order to be able to use this option.")
+           }
 
            TextField {
                id: ipAddress
@@ -256,24 +316,13 @@ Page
                label: qsTr("Password")
                width: parent.width
                EnterKey.enabled: text.length > 0
-               EnterKey.iconSource: "image://theme/icon-m-enter-accept"
-               onClicked: {
-                   remorsepopup.execute(qsTr("Transfering"), function() {
-                       busyindicator.running = true;
-                       mydatatransfer.transfer(ipAddress.text, passwordField.text, appsTransfer, documentsTransfer, downloadsTransfer, musicTransfer, picturesTransfer, videosTransfer);
-                   });
-               }
+               EnterKey.iconSource: "image://theme/icon-m-enter-close"
+               EnterKey.onClicked: focus = false
            }
 
             IconTextSwitch {
                 id: itsappstransfer
-                automaticCheck: true
-                text: qsTr("Apps")
-                onClicked: { appsTransfer = itsappstransfer.checked }
-            }
-
-            IconTextSwitch {
-                id: itsappstransfer
+                checked: true
                 automaticCheck: true
                 text: qsTr("Apps")
                 onClicked: { appsTransfer = itsappstransfer.checked }
@@ -281,6 +330,7 @@ Page
 
             IconTextSwitch {
                 id: itsdocumentstransfer
+                checked: true
                 automaticCheck: true
                 text: qsTr("Documents")
                 onClicked: { documentsTransfer = itsdocumentstransfer.checked }
@@ -288,6 +338,7 @@ Page
 
             IconTextSwitch {
                 id: itsdownloadstransfer
+                checked: true
                 automaticCheck: true
                 text: qsTr("Downloads")
                 onClicked: { downloadsTransfer = itsdownloadstransfer.checked }
@@ -295,6 +346,7 @@ Page
 
             IconTextSwitch {
                 id: itsmusictransfer
+                checked: true
                 automaticCheck: true
                 text: qsTr("Music")
                 onClicked: { musicTransfer = itsmusictransfer.checked }
@@ -302,6 +354,7 @@ Page
 
             IconTextSwitch {
                 id: itspicturestransfer
+                checked: true
                 automaticCheck: true
                 text: qsTr("Pictures")
                 onClicked: { picturesTransfer = itspicturestransfer.checked }
@@ -309,17 +362,18 @@ Page
 
             IconTextSwitch {
                 id: itsvideostransfer
+                checked: true
                 automaticCheck: true
                 text: qsTr("Videos")
                 onClicked: { videosTransfer = itsvideostransfer.checked }
             }
 
            Button {
-               enabled: ( ipAddress.acceptableInput ) && ( passwordField.text.length > 0 )
+               enabled: ( ipAddress.acceptableInput ) && ( passwordField.text.length > 0 ) && (appsTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer)
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Transfer")
                onClicked: {
-                   remorsepopup.execute(qsTr("Transfering"), function() {
+                   remorsepopup.execute(qsTr("Transferring"), function() {
                        busyindicator.running = true;
                        mydatatransfer.transfer(ipAddress.text, passwordField.text, appsTransfer, documentsTransfer, downloadsTransfer, musicTransfer, picturesTransfer, videosTransfer);
                    });

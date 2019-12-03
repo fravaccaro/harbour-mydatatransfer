@@ -19,11 +19,6 @@ void MyDataTransfer::backup(bool apps, bool documents, bool downloads, bool musi
     Spawner::execute("/usr/share/harbour-mydatatransfer/scripts/backup.sh", SPAWN_ARGS(QString::number(apps) << QString::number(documents) << QString::number(downloads) << QString::number(music) << QString::number(pictures) << QString::number(videos)), [this]() { emit backupDone(); });
 }
 
-void MyDataTransfer::backup(bool apps, bool documents, bool downloads, bool music, bool pictures, bool videos) const
-{
-    Spawner::execute("/usr/share/harbour-mydatatransfer/scripts/backup.sh", SPAWN_ARGS(QString::number(apps) << QString::number(documents) << QString::number(downloads) << QString::number(music) << QString::number(pictures) << QString::number(videos)), [this]() { emit backupDone(); });
-}
-
 void MyDataTransfer::restore(const QString& filename, bool apps, bool documents, bool downloads, bool music, bool pictures, bool videos) const
 {
     Spawner::execute("/usr/share/harbour-mydatatransfer/scripts/restore.sh", SPAWN_ARGS(filename << QString::number(apps) << QString::number(documents) << QString::number(downloads) << QString::number(music) << QString::number(pictures) << QString::number(videos)), [this]() { emit restoreDone(); });

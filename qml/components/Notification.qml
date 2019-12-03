@@ -4,19 +4,10 @@ import org.nemomobile.notifications 1.0
 
 Notification
 {
-     id: notification
      category: "x-nemo.mydatatransfer"
-     appName: "UI Themer"
+     appName: "My Data Transfer"
      appIcon: "/usr/share/icons/hicolor/86x86/apps/harbour-mydatatransfer.png"
-     previewSummary: "UI Themer"
-     previewBody: qsTr("Settings applied.")
+     previewSummary: "My Data Transfer"
      itemCount: 1
      expireTimeout: 5000
-     remoteActions: [ {
-         "name": "default",
-         "service": "org.nemomobile.mydatatransfer",
-         "path": "/done",
-         "iface": "org.nemomobile.mydatatransfer",
-         "method": "actionDone"
-     } ]
  }
