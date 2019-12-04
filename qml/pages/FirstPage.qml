@@ -294,6 +294,12 @@ Page
            SectionHeader { text: qsTr("Transfer to a new device") }
 
            LabelText {
+               visible: !mydatatransfer.hasSshpassInstalled()
+               color: Theme.secondaryHighlightColor
+               text: qsTr("WARNING: sshpass is not installed, hence data transferring will not work. Install it either from <a href='https://openrepos.net/content/nieldk/sshpass'>here</a> or via Storeman if you want to use this feature, then restart My Data Transfer.")
+           }
+
+           LabelText {
                text: qsTr("Insert your new device IP address and password, then choose what to transfer. Both of your devices need to be on the same WLAN network.")
            }
 

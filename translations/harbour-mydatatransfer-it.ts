@@ -178,5 +178,9 @@
         <source>App data</source>
         <translation>Dati app</translation>
     </message>
+    <message>
+        <source>WARNING: sshpass is not installed, hence data transferring will not work. Install it either from &lt;a href=&apos;https://openrepos.net/content/nieldk/sshpass&apos;&gt;here&lt;/a&gt; or via Storeman if you want to use this feature, then restart My Data Transfer.</source>
+        <translation>ATTENZIONE: sshpass non è installato, per cui il trasferimento dei dati non funzionerà. Installalo da &lt;a href=&apos;https://openrepos.net/content/nieldk/sshpass&apos;&gt;qui&lt;/a&gt; o via Storeman se vuoi utilizzare questa funzionalità, quindi riavvia My Data Transfer.</translation>
+    </message>
 </context>
 </TS>

@@ -14,6 +14,14 @@ QString MyDataTransfer::whoami() const
     return Spawner::executeSync("whoami");
 }
 
+bool MyDataTransfer::hasSshpassInstalled() const
+{
+    bool res = QFileInfo("/usr/bin/sshpass").exists();
+
+   qDebug("%d\n", res);
+   return res;
+}
+
 void MyDataTransfer::backup(bool apps, bool documents, bool downloads, bool music, bool pictures, bool videos) const
 {
     Spawner::execute("/usr/share/harbour-mydatatransfer/scripts/backup.sh", SPAWN_ARGS(QString::number(apps) << QString::number(documents) << QString::number(downloads) << QString::number(music) << QString::number(pictures) << QString::number(videos)), [this]() { emit backupDone(); });

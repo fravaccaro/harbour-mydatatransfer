@@ -14,14 +14,14 @@ Name:       harbour-mydatatransfer
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:        My Data Transfer
 Version:        0.0.1
-Release:        4
+Release:        8
 Group:          Qt/Qt
 License:        GPLv3
 Packager:       fravaccaro <fravaccaro@jollacommunity.it>
 URL:            https://github.com/fravaccaro/harbour-mydatatransfer
 Source0:        %{name}-%{version}.tar.bz2
 Source100:      harbour-mydatatransfer.yaml
-Requires:       sailfishsilica-qt5 >= 0.10.9, sailfish-version >= 3.2.0, rsync, sshpass
+Requires:       sailfishsilica-qt5 >= 0.10.9, sailfish-version >= 3.2.0, rsync
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
