@@ -119,10 +119,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Apps</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Documents</source>
         <translation type="unfinished"></translation>
     </message>
@@ -176,6 +172,10 @@
     </message>
     <message>
         <source>Insert your new device IP address and password, then choose what to transfer. Both of your devices need to be on the same WLAN network.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App data</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

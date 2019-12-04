@@ -119,10 +119,6 @@
         <translation>Trasferisci su un nuovo dispositivo</translation>
     </message>
     <message>
-        <source>Apps</source>
-        <translation>App</translation>
-    </message>
-    <message>
         <source>Documents</source>
         <translation>Documenti</translation>
     </message>
@@ -177,6 +173,10 @@
     <message>
         <source>Insert your new device IP address and password, then choose what to transfer. Both of your devices need to be on the same WLAN network.</source>
         <translation>Inserisci l&apos;indirizzo IP e la password del tuo nuovo dispositivo, quindi scegli cosa trasferire. Sia il vecchio che il nuovo dispositivo devono essere sulla stessa rete WLAN.</translation>
+    </message>
+    <message>
+        <source>App data</source>
+        <translation>Dati app</translation>
     </message>
 </context>
 </TS>

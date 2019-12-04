@@ -151,7 +151,7 @@ Page
                 id: itsappsbackup
                 checked: true
                 automaticCheck: true
-                text: qsTr("Apps")
+                text: qsTr("App data")
                 onClicked: { appsBackup = itsappsbackup.checked }
             }
 
@@ -235,7 +235,7 @@ Page
                 id: itsappsrestore
                 checked: true
                 automaticCheck: true
-                text: qsTr("Apps")
+                text: qsTr("App data")
                 onClicked: { appsRestore = itsappsrestore.checked }
             }
 
@@ -329,7 +329,7 @@ Page
                 id: itsappstransfer
                 checked: true
                 automaticCheck: true
-                text: qsTr("Apps")
+                text: qsTr("App data")
                 onClicked: { appsTransfer = itsappstransfer.checked }
             }
 
