@@ -294,12 +294,6 @@ Page
            SectionHeader { text: qsTr("Transfer to a new device") }
 
            LabelText {
-               visible: !mydatatransfer.hasSshpassInstalled()
-               color: Theme.secondaryHighlightColor
-               text: qsTr("WARNING: sshpass is not installed, hence data transferring will not work. Install it either from <a href='https://openrepos.net/content/nieldk/sshpass'>here</a> or via Storeman if you want to use this feature, then restart My Data Transfer.")
-           }
-
-           LabelText {
                text: qsTr("Insert your new device IP address and password, then choose what to transfer. Both of your devices need to be on the same WLAN network.")
            }
 
@@ -307,7 +301,14 @@ Page
                text: qsTr("NOTE: you need the developer mode active and a root password set on your new device in order to be able to use this option.")
            }
 
+           LabelText {
+               visible: !mydatatransfer.hasSshpassInstalled()
+               color: Theme.secondaryHighlightColor
+               text: qsTr("WARNING: sshpass is not installed, hence data transferring will not work. Install it either from <a href='https://openrepos.net/content/nieldk/sshpass'>here</a> or via Storeman if you want to use this feature, then restart My Data Transfer.")
+           }
+
            TextField {
+               enabled: mydatatransfer.hasSshpassInstalled()
                id: ipAddress
                placeholderText: qsTr("IP address")
                label: qsTr("IP address")
@@ -322,6 +323,7 @@ Page
            }
 
            PasswordField {
+               enabled: mydatatransfer.hasSshpassInstalled()
                id: passwordField
                placeholderText: qsTr("Password")
                label: qsTr("Password")
@@ -332,6 +334,7 @@ Page
            }
 
             IconTextSwitch {
+                enabled: mydatatransfer.hasSshpassInstalled()
                 id: itsappstransfer
                 checked: true
                 automaticCheck: true
@@ -340,6 +343,7 @@ Page
             }
 
             IconTextSwitch {
+                enabled: mydatatransfer.hasSshpassInstalled()
                 id: itsdocumentstransfer
                 checked: true
                 automaticCheck: true
@@ -348,6 +352,7 @@ Page
             }
 
             IconTextSwitch {
+                enabled: mydatatransfer.hasSshpassInstalled()
                 id: itsdownloadstransfer
                 checked: true
                 automaticCheck: true
@@ -356,6 +361,7 @@ Page
             }
 
             IconTextSwitch {
+                enabled: mydatatransfer.hasSshpassInstalled()
                 id: itsmusictransfer
                 checked: true
                 automaticCheck: true
@@ -364,6 +370,7 @@ Page
             }
 
             IconTextSwitch {
+                enabled: mydatatransfer.hasSshpassInstalled()
                 id: itspicturestransfer
                 checked: true
                 automaticCheck: true
@@ -372,6 +379,7 @@ Page
             }
 
             IconTextSwitch {
+                enabled: mydatatransfer.hasSshpassInstalled()
                 id: itsvideostransfer
                 checked: true
                 automaticCheck: true
@@ -380,7 +388,7 @@ Page
             }
 
            Button {
-               enabled: ( ipAddress.acceptableInput ) && ( passwordField.text.length > 0 ) && (appsTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer)
+               enabled: ( mydatatransfer.hasSshpassInstalled() && ipAddress.acceptableInput ) && ( passwordField.text.length > 0 ) && (appsTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer)
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Transfer")
                onClicked: {
@@ -390,8 +398,6 @@ Page
                    });
                }
            }
-
-
 
         }
 
