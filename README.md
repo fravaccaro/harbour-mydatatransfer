@@ -36,4 +36,7 @@ Builds available [here](https://openrepos.net/content/fravaccaro/my-data-transfe
 
 ## Credits
 
-
+* Thanks to flypigahoy for his ispiring blog post about copying settings and files over a new device.
+* Keyboard navigation based on (https://github.com/Wunderfitz/harbour-piepmatz)[Piepmatz] by Sebastian Wolf.
+* Iconography by (https://www.flaticon.com/authors/retinaicons)[Retinaicons].
+* Thanks to all the testers for being brave and patient.
