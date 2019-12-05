@@ -1,4 +1,7 @@
-* Tue Dec 4 2019 0.0.2
+* Thu Dec 5 2019 0.0.3
+- Fixed backup not happening in some Sailfish OS versions.
+
+* Wed Dec 4 2019 0.0.2
 - Implemented documents, downloads, music, pictures and videos backup.
 
 * Sun Dec 1 2019 0.0.1

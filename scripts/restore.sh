@@ -7,6 +7,7 @@ downloads=$4
 music=$5
 pictures=$6
 videos=$7
+tmp=mydatatransfer
 
 echo "RESTORING MYDATATRANSFER BACKUP..."
 
@@ -15,37 +16,37 @@ cd ~
 if [ "$apps" = 1 ]; then
 	echo "APPS RESTORING..."
 	# restore config and local folders
-        tar -xf $name -C ./ .config && tar -xvf $name -C ./ .local
+        tar --strip-components=1 -xf $name $tmp/.config && tar --strip-components=1 -xvf $name $tmp/.local
 fi
 
 if [ "$documents" = 1 ]; then
 	echo "DOCUMENTS RESTORING..."
 	# restore documents
-        tar -xf $name -C ./ Documents
+        tar --strip-components=1 -xf $name $tmp/Documents
 fi
 
 if [ "$downloads" = 1 ]; then
 	echo "DOWLOADS RESTORING..."
 	# restore downloads
-        tar -xf $name -C ./ Downloads
+        tar --strip-components=1 -xf $name $tmp/Downloads
 fi
 
 if [ "$music" = 1 ]; then
 	echo "MUSIC RESTORING..."
 	# restore music
-        tar -xf $name -C ./ Music
+        tar --strip-components=1 -xf $name $tmp/Music
 fi
 
 if [ "$pictures" = 1 ]; then
 	echo "PICTURES RESTORING..."
 	# restore pictures
-        tar -xf $name -C ./ Pictures
+        tar --strip-components=1 -xf $name $tmp/Pictures
 fi
 
 if [ "$videos" = 1 ]; then
 	echo "VIDEOS RESTORING..."
 	# restore videos
-        tar -xf $name -C ./ Videos
+        tar --strip-components=1 -xf $name $tmp/Videos
 fi
 
 echo "RESTORED!"

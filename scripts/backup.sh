@@ -7,7 +7,7 @@ downloads=$3
 music=$4
 pictures=$5
 videos=$6
-tmp=tmp-mdt
+tmp=mydatatransfer
 
 echo "CREATING MYDATATRANSFER BACKUP..."
 
@@ -17,7 +17,7 @@ mkdir -p $tmp
 if [ "$apps" = 1 ]; then
 	echo "APPS BACKUP..."
 	# copy .config and .local folders into working dir
-	rsync -av --progress -n .config /$tmp \
+        rsync -av --progress .config $tmp \
 	--exclude .config/Jolla \
 	--exclude .config/QtProject \
 	--exclude .config/dconf \
@@ -33,7 +33,7 @@ if [ "$apps" = 1 ]; then
 	--exclude .config/user-dirs.locale \
 	--exclude .config/.sailfish-gallery-reindex
 
-	rsync -av --progress -n .local /$tmp \
+        rsync -av --progress .local $tmp \
 	--exclude .local/nemo-transferengine \
 	--exclude .local/share/ambienced \
 	--exclude .local/share/applications \
@@ -53,36 +53,35 @@ fi
 if [ "$documents" = 1 ]; then
 	echo "DOCUMENTS BACKUP..."
 	# copy documents folder into working dir
-        rsync -av --progress -n Documents /$tmp
+        rsync -av --progress Documents $tmp
 fi
 
 if [ "$downloads" = 1 ]; then
 	echo "DOWLOADS BACKUP..."
 	# copy downloads folder into working dir
-        rsync -av --progress -n Downloads /$tmp
+        rsync -av --progress Downloads $tmp
 fi
 
 if [ "$music" = 1 ]; then
 	echo "MUSIC BACKUP..."
 	# copy music folder into working dir
-        rsync -av --progress -n Music /$tmp
+        rsync -av --progress Music $tmp
 fi
 
 if [ "$pictures" = 1 ]; then
 	echo "PICTURES BACKUP..."
 	# copy music folder into working dir
-        rsync -av --progress -n Pictures /$tmp
+        rsync -av --progress Pictures $tmp
 fi
 
 if [ "$videos" = 1 ]; then
 	echo "VIDEOS BACKUP..."
 	# copy videos folder into working dir
-        rsync -av --progress -n Videos /$tmp
+        rsync -av --progress Videos $tmp
 fi
 
-cd $tmp
-tar -cf $name.mydatatransfer . -C ~/
-cd ~
+tar -cf $name.mydatatransfer $tmp
+
 rm -rf $tmp
 
 echo "BACKUPED!"
