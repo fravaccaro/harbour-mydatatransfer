@@ -19,7 +19,8 @@ Backup and transfer app data, documents, music, pictures and videos on your Sail
 <br style="clear: both; height:5px;" />
 
 * Backup of Sailfish OS app data and files inside Documents, Music, Pictures and Videos folders.
-* Restore from a save file.
+* Backup to SD card.
+* Restore from a backup file.
 * Over-the-air transfer of data and files (only with Developer mode active and ssh password set).
 
 ## Translate
