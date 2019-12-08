@@ -3,4 +3,4 @@ Type=Application
 X-Nemo-Application-Type=silica-qt5
 Icon=harbour-mydatatransfer
 Exec=invoker --type=generic -s /usr/bin/harbour-mydatatransfer
-Name=My Data Transfer
+Name=My Data T.

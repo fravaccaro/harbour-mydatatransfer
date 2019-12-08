@@ -69,54 +69,18 @@
     </message>
 </context>
 <context>
-    <name>FirstPage</name>
+    <name>BackupPage</name>
+    <message>
+        <source>Backup completed</source>
+        <translation>Backup completato</translation>
+    </message>
     <message>
         <source>Backup</source>
         <translation>Backup</translation>
     </message>
     <message>
-        <source>Backuping</source>
-        <translation>Backup in corso</translation>
-    </message>
-    <message>
-        <source>Restore</source>
-        <translation>Ripristina</translation>
-    </message>
-    <message>
-        <source>File</source>
-        <translation>File</translation>
-    </message>
-    <message>
-        <source>None</source>
-        <translation>Nessuno</translation>
-    </message>
-    <message>
-        <source>Select backup</source>
-        <translation>Seleziona backup</translation>
-    </message>
-    <message>
-        <source>Restoring backup</source>
-        <translation>Ripristino backup</translation>
-    </message>
-    <message>
-        <source>My Data Transfer</source>
-        <translation>My Data Transfer</translation>
-    </message>
-    <message>
-        <source>Transfer</source>
-        <translation>Trasferisci</translation>
-    </message>
-    <message>
-        <source>IP address</source>
-        <translation>Indirizzo IP</translation>
-    </message>
-    <message>
-        <source>Password</source>
-        <translation>Password</translation>
-    </message>
-    <message>
-        <source>Transfer to a new device</source>
-        <translation>Trasferisci su un nuovo dispositivo</translation>
+        <source>App data</source>
+        <translation>Dati app</translation>
     </message>
     <message>
         <source>Documents</source>
@@ -139,48 +103,201 @@
         <translation>Video</translation>
     </message>
     <message>
-        <source>Choose what to backup. The save file will be stored into your &lt;i&gt;home&lt;/i&gt; directory.</source>
-        <translation>Scegli di cosa fare il backup. Il file di salvataggio sarà conservato nella tua cartella &lt;i&gt;home&lt;/i&gt;.</translation>
+        <source>Backuping</source>
+        <translation>Backup in corso</translation>
     </message>
     <message>
-        <source>Select a save file and choose what to restore.</source>
-        <translation>Seleziona un file di salvataggio e scegli cosa ripristinare.</translation>
+        <source>Choose what to backup and where.</source>
+        <translation>Scegli di cosa fare il backup e dove.</translation>
     </message>
     <message>
-        <source>Transferring</source>
-        <translation>Trasferimento</translation>
+        <source>Save in</source>
+        <translation>Salva in</translation>
     </message>
     <message>
-        <source>Backup completed</source>
-        <translation>Backup completato</translation>
+        <source>internal memory</source>
+        <translation>memoria interna</translation>
     </message>
+    <message>
+        <source>SD card</source>
+        <translation>scheda SD</translation>
+    </message>
+    <message>
+        <source>The backup file will be saved in the internal memory.</source>
+        <translation>Il file di backup sarà salvato nella memoria interna.</translation>
+    </message>
+    <message>
+        <source>The backup file will be saved in the SD card.</source>
+        <translation>Il file di backup sarà salvato nella scheda SD.</translation>
+    </message>
+</context>
+<context>
+    <name>MainPage</name>
+    <message>
+        <source>About</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <source>My Data Transfer</source>
+        <translation>My Data Transfer</translation>
+    </message>
+    <message>
+        <source>Backup</source>
+        <translation>Backup</translation>
+    </message>
+    <message>
+        <source>Restore</source>
+        <translation>Ripristina</translation>
+    </message>
+    <message>
+        <source>Transfer</source>
+        <translation>Trasferisci</translation>
+    </message>
+</context>
+<context>
+    <name>RestorePage</name>
     <message>
         <source>Restore completed</source>
         <translation>Ripristino completato</translation>
     </message>
     <message>
-        <source>Transfer completed</source>
-        <translation>Trasferimento completato</translation>
+        <source>Restore</source>
+        <translation>Ripristina</translation>
     </message>
     <message>
-        <source>About</source>
-        <translation>Info su</translation>
+        <source>File</source>
+        <translation>File</translation>
     </message>
     <message>
-        <source>NOTE: you need the developer mode active and a root password set on your new device in order to be able to use this option.</source>
-        <translation>NOTA: devi avere la modalità sviluppatore attiva e una password di root impostata sul tuo nuovo dispositivo per utilizzare questa opzione.</translation>
+        <source>None</source>
+        <translation>Nessuno</translation>
     </message>
     <message>
-        <source>Insert your new device IP address and password, then choose what to transfer. Both of your devices need to be on the same WLAN network.</source>
-        <translation>Inserisci l&apos;indirizzo IP e la password del tuo nuovo dispositivo, quindi scegli cosa trasferire. Sia il vecchio che il nuovo dispositivo devono essere sulla stessa rete WLAN.</translation>
+        <source>Select backup</source>
+        <translation>Seleziona backup</translation>
     </message>
     <message>
         <source>App data</source>
         <translation>Dati app</translation>
     </message>
     <message>
+        <source>Documents</source>
+        <translation>Documenti</translation>
+    </message>
+    <message>
+        <source>Downloads</source>
+        <translation>File scaricati</translation>
+    </message>
+    <message>
+        <source>Music</source>
+        <translation>Musica</translation>
+    </message>
+    <message>
+        <source>Pictures</source>
+        <translation>Immagini</translation>
+    </message>
+    <message>
+        <source>Videos</source>
+        <translation>Video</translation>
+    </message>
+    <message>
+        <source>Restoring backup</source>
+        <translation>Ripristino backup</translation>
+    </message>
+    <message>
+        <source>Select a backup file and choose what to restore.</source>
+        <translation>Seleziona un file di backup e scegli cosa ripristinare.</translation>
+    </message>
+</context>
+<context>
+    <name>TransferPage</name>
+    <message>
+        <source>Transfer completed</source>
+        <translation>Trasferimento completato</translation>
+    </message>
+    <message>
+        <source>Transfer</source>
+        <translation>Trasferisci</translation>
+    </message>
+    <message>
         <source>WARNING: sshpass is not installed, hence data transferring will not work. Install it either from &lt;a href=&apos;https://openrepos.net/content/nieldk/sshpass&apos;&gt;here&lt;/a&gt; or via Storeman if you want to use this feature, then restart My Data Transfer.</source>
         <translation>ATTENZIONE: sshpass non è installato, per cui il trasferimento dei dati non funzionerà. Installalo da &lt;a href=&apos;https://openrepos.net/content/nieldk/sshpass&apos;&gt;qui&lt;/a&gt; o via Storeman se vuoi utilizzare questa funzionalità, quindi riavvia My Data Transfer.</translation>
+    </message>
+    <message>
+        <source>IP address</source>
+        <translation>Indirizzo IP</translation>
+    </message>
+    <message>
+        <source>Password</source>
+        <translation>Password</translation>
+    </message>
+    <message>
+        <source>App data</source>
+        <translation>Dati app</translation>
+    </message>
+    <message>
+        <source>Documents</source>
+        <translation>Documenti</translation>
+    </message>
+    <message>
+        <source>Downloads</source>
+        <translation>File scaricati</translation>
+    </message>
+    <message>
+        <source>Music</source>
+        <translation>Musica</translation>
+    </message>
+    <message>
+        <source>Pictures</source>
+        <translation>Immagini</translation>
+    </message>
+    <message>
+        <source>Videos</source>
+        <translation>Video</translation>
+    </message>
+    <message>
+        <source>Transferring</source>
+        <translation>Trasferimento</translation>
+    </message>
+    <message>
+        <source>Transfer mode</source>
+        <translation>Modalità trasferimento</translation>
+    </message>
+    <message>
+        <source>Select whether transferring from or to another device.</source>
+        <translation>Seleziona se trasferire da o a un nuovo dispositivo.</translation>
+    </message>
+    <message>
+        <source>Transfer settings and files to a another device.</source>
+        <translation>Trasferisci impostazioni e file a un altro dispositivo.</translation>
+    </message>
+    <message>
+        <source>to another device</source>
+        <translation>a un altro dispositivo</translation>
+    </message>
+    <message>
+        <source>from another device</source>
+        <translation>da un altro dispositivo</translation>
+    </message>
+    <message>
+        <source>Follow the instructions</source>
+        <translation>Segui le istruzioni</translation>
+    </message>
+    <message>
+        <source>on the device you are transferring from</source>
+        <translation>sul dispositivo dal quale stai trasferendo</translation>
+    </message>
+    <message>
+        <source>Insert your new device IP address and password, then choose what to transfer. Make sure you have enough free space on the internal memory and that both of your devices are on the same WLAN network.</source>
+        <translation>Inserisci l&apos;indirizzo IP e la password del tuo nuovo dispositivo, quindi scegli cosa trasferire. Assicurati di avere sufficiente momeoria interna libera e che entrambi i tuoi dispositivi siano sulla stessa rete WLAN.</translation>
+    </message>
+    <message>
+        <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
+        <translation>NOTA: devi avere la modalità sviluppatore attiva e una password ssh impostata su entrambi i tuoi dispositivi per utilizzare questa opzione.</translation>
+    </message>
+    <message>
+        <source>Transfer settings and files from a another device.</source>
+        <translation>Trasferisci impostazioni e file da un altro dispositivo.</translation>
     </message>
 </context>
 </TS>

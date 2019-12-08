@@ -7,11 +7,17 @@ downloads=$3
 music=$4
 pictures=$5
 videos=$6
+destination=$7
 tmp=mydatatransfer
 
 echo "CREATING MYDATATRANSFER BACKUP..."
 
-cd ~
+if [ "$destination" = 1 ]; then
+    cd /media/sdcard/*/
+else
+    cd ~
+fi
+
 mkdir -p $tmp
 
 if [ "$apps" = 1 ]; then

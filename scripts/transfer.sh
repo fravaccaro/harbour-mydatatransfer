@@ -100,6 +100,10 @@ sshpass -p $password \
         ssh -o StrictHostKeyChecking=no $user@$ipaddress \
         'bash -s' < /usr/share/harbour-mydatatransfer/scripts/restore.sh ~/$name.mydatatransfer $apps $documents $downloads $music $pictures $videos
 
+sshpass -p $password \
+        ssh -o StrictHostKeyChecking=no $user@$ipaddress \
+        rm $name.mydatatransfer
+
 rm $name.mydatatransfer
 
 echo "TRANSFERRED!"

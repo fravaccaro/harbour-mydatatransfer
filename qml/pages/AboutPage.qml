@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import Sailfish.Silica 1.0
+import org.nemomobile.configuration 1.0
 import "../components"
 
 Page
@@ -39,7 +40,22 @@ Page
         }
 
         if (event.key === Qt.Key_H) {
-            pageStack.replaceAbove(null, Qt.resolvedUrl("FirstPage.qml"));
+            pageStack.replaceAbove(null, Qt.resolvedUrl("MainPage.qml"));
+            event.accepted = true;
+        }
+
+        if (event.key === Qt.Key_S) {
+            pageStack.push(Qt.resolvedUrl("BackupPage.qml"));
+            event.accepted = true;
+        }
+
+        if (event.key === Qt.Key_R) {
+            pageStack.push(Qt.resolvedUrl("RestorePage.qml"));
+            event.accepted = true;
+        }
+
+        if (event.key === Qt.Key_T) {
+            pageStack.push(Qt.resolvedUrl("TransferPage.qml"));
             event.accepted = true;
         }
     }
@@ -69,7 +85,7 @@ Page
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeSmall
-                text: "My Data Transfer 0.0.1" }
+                text: "My Data Transfer 0.0.4" }
 
             LabelText {
                 text: qsTr("Backup and transfer app data, documents, music, pictures and videos on your Sailfish OS devices.")

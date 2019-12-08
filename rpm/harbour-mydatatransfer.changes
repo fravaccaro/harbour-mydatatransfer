@@ -1,5 +1,10 @@
+* Sun Dec 8 2019 0.0.4
+- UI updated.
+- Icon updated.
+- Added option to backup to sd card.
+
 * Thu Dec 5 2019 0.0.3
-- Fixed backup not happening in some Sailfish OS versions.
+- Fixed backup not working in some Sailfish OS versions.
 
 * Wed Dec 4 2019 0.0.2
 - Implemented documents, downloads, music, pictures and videos backup.

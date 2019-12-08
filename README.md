@@ -15,7 +15,7 @@ Backup and transfer app data, documents, music, pictures and videos on your Sail
 
 ## Features
 
-<a href="docs/screenshot1.png"><img width="25%" src="docs/screenshot1.png" /></a>
+<a href="docs/screenshot1.png"><img width="33%" style="float: left;" src="docs/screenshot1.png" /></a> <a href="docs/screenshot2.png"><img width="33%" style="float: left;" src="docs/screenshot2.png" /></a> <a href="docs/screenshot3.png"><img width="33%" style="float: left;" src="docs/screenshot3.png" /></a>
 <br style="clear: both; height:5px;" />
 
 * Backup of Sailfish OS app data and files inside Documents, Music, Pictures and Videos folders.
