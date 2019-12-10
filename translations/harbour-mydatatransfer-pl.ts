@@ -72,11 +72,11 @@
     <name>BackupPage</name>
     <message>
         <source>Backup completed</source>
-        <translation>Kompletna kopia zapasowa</translation>
+        <translation>Kopia zapasowa utworzona</translation>
     </message>
     <message>
         <source>Backup</source>
-        <translation>Zrób kopie zapasową</translation>
+        <translation>Kopia zapasowa</translation>
     </message>
     <message>
         <source>App data</source>
@@ -158,7 +158,7 @@
     <name>RestorePage</name>
     <message>
         <source>Restore completed</source>
-        <translation>Przywrócenie wszystkiego</translation>
+        <translation>Przywracanie zakończone</translation>
     </message>
     <message>
         <source>Restore</source>
