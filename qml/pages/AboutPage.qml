@@ -156,6 +156,26 @@ Page
                   value: "Francesco Vaccaro"
               }
 
+              DetailItem {
+                  label: "Magyar"
+                  value: "Szabó G."
+              }
+
+              DetailItem {
+                  label: "Polski"
+                  value: "atlochowski"
+              }
+
+              DetailItem {
+                  label: "русский (Russian)"
+                  value: "Oleh Ampilohov"
+              }
+
+              DetailItem {
+                  label: "Svenska"
+                  value: "Åke Engelbrektson"
+              }
+
             Item {
                 width: parent.width
                 height: Theme.paddingLarge
