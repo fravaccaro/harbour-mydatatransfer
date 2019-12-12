@@ -86,6 +86,8 @@ Page
     property alias musicBackup: itsmusicbackup.checked
     property alias picturesBackup: itspicturesbackup.checked
     property alias videosBackup: itsvideosbackup.checked
+    property alias callsBackup: itscallsbackup.checked
+    property alias messagesBackup: itsmessagesbackup.checked
 
     Connections
     {
@@ -151,6 +153,22 @@ Page
             }
 
             IconTextSwitch {
+                id: itscallsbackup
+                checked: true
+                automaticCheck: true
+                text: qsTr("Call history")
+                onClicked: { callsBackup = itscallsbackup.checked }
+            }
+
+            IconTextSwitch {
+                id: itsmessagesbackup
+                checked: true
+                automaticCheck: true
+                text: qsTr("Messages")
+                onClicked: { messagesBackup = itsmessagesbackup.checked }
+            }
+
+            IconTextSwitch {
                 id: itsdocumentsbackup
                 checked: true
                 automaticCheck: true
@@ -191,13 +209,13 @@ Page
             }
 
            Button {
-               enabled: (appsBackup || documentsBackup || downloadsBackup || musicBackup || picturesBackup || videosBackup)
+               enabled: (appsBackup || callsBackup || messagesBackup || documentsBackup || downloadsBackup || musicBackup || picturesBackup || videosBackup)
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Backup")
                onClicked: {
                    remorsepopup.execute(qsTr("Backuping"), function() {
                        settings.isRunning = true;
-                       mydatatransfer.backup(appsBackup, documentsBackup, downloadsBackup, musicBackup, picturesBackup, videosBackup, backupDestination);
+                       mydatatransfer.backup(appsBackup, documentsBackup, downloadsBackup, musicBackup, picturesBackup, videosBackup, callsBackup, messagesBackup, backupDestination);
                    });
                }
            }

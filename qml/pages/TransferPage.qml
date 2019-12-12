@@ -92,6 +92,8 @@ Page
     property alias musicTransfer: itsmusictransfer.checked
     property alias picturesTransfer: itspicturestransfer.checked
     property alias videosTransfer: itsvideostransfer.checked
+    property alias callsTransfer: itscallstransfer.checked
+    property alias messagesTransfer: itsmessagestransfer.checked
 
     Connections
     {
@@ -202,6 +204,26 @@ Page
             IconTextSwitch {
                 visible: transferMode === 0
                 enabled: mydatatransfer.hasSshpassInstalled()
+                id: itscallstransfer
+                checked: true
+                automaticCheck: true
+                text: qsTr("Call history")
+                onClicked: { callsTransfer = itscallstransfer.checked }
+            }
+
+            IconTextSwitch {
+                visible: transferMode === 0
+                enabled: mydatatransfer.hasSshpassInstalled()
+                id: itsmessagestransfer
+                checked: true
+                automaticCheck: true
+                text: qsTr("Messages")
+                onClicked: { messagesTransfer = itsmessagestransfer.checked }
+            }
+
+            IconTextSwitch {
+                visible: transferMode === 0
+                enabled: mydatatransfer.hasSshpassInstalled()
                 id: itsdocumentstransfer
                 checked: true
                 automaticCheck: true
@@ -251,13 +273,13 @@ Page
 
            Button {
                visible: transferMode === 0
-               enabled: ( mydatatransfer.hasSshpassInstalled() && ipAddress.acceptableInput ) && ( passwordField.text.length > 0 ) && (appsTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer)
+               enabled: ( mydatatransfer.hasSshpassInstalled() && ipAddress.acceptableInput ) && ( passwordField.text.length > 0 ) && (appsTransfer ||  callsTransfer || messagesTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer)
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Transfer")
                onClicked: {
                    remorsepopup.execute(qsTr("Transferring"), function() {
                        settings.isRunning = true;
-                       mydatatransfer.transfer(ipAddress.text, passwordField.text, appsTransfer, documentsTransfer, downloadsTransfer, musicTransfer, picturesTransfer, videosTransfer);
+                       mydatatransfer.transfer(ipAddress.text, passwordField.text, appsTransfer, documentsTransfer, downloadsTransfer, musicTransfer, picturesTransfer, videosTransfer, callsTransfer, messagesTransfer);
                    });
                }
            }

@@ -7,6 +7,8 @@ downloads=$4
 music=$5
 pictures=$6
 videos=$7
+calls=$8
+messages=$9
 tmp=mydatatransfer
 
 echo "RESTORING MYDATATRANSFER BACKUP..."
@@ -47,6 +49,22 @@ if [ "$videos" = 1 ]; then
 	echo "VIDEOS RESTORING..."
 	# restore videos
         tar --strip-components=1 -xf $name $tmp/Videos
+fi
+
+if [ "$calls" = 1 ]; then
+        echo "CALL HISTORY RESTORING..."
+        tar --strip-components=1 -xf $name $tmp/calls.dat
+        commhistory-tool import calls.dat
+        pkill voicecall-ui
+        rm calls.dat
+fi
+
+if [ "$messages" = 1 ]; then
+        echo "MESSAGES RESTORING..."
+        tar --strip-components=1 -xf $name $tmp/groups.dat
+        commhistory-tool import groups.dat
+        pkill jolla-messages
+        rm groups.dat
 fi
 
 echo "RESTORED!"

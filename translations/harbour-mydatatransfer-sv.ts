@@ -130,6 +130,14 @@
         <source>The backup file will be saved in the SD card.</source>
         <translation>Säkerhetskopian kommer att sparas på SD-kortet.</translation>
     </message>
+    <message>
+        <source>Call history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainPage</name>
@@ -207,6 +215,14 @@
     <message>
         <source>Select a backup file and choose what to restore.</source>
         <translation>Välj en säkerhetskopia och vad som skall återställas.</translation>
+    </message>
+    <message>
+        <source>Call history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -298,6 +314,14 @@
     <message>
         <source>Transfer settings and files from a another device.</source>
         <translation>Överför inställningar och filer från en annan enhet.</translation>
+    </message>
+    <message>
+        <source>Call history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

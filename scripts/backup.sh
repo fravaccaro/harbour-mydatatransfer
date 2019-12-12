@@ -7,7 +7,9 @@ downloads=$3
 music=$4
 pictures=$5
 videos=$6
-destination=$7
+calls=$7
+messages=$8
+destination=$9
 tmp=mydatatransfer
 
 echo "CREATING MYDATATRANSFER BACKUP..."
@@ -46,8 +48,7 @@ if [ "$apps" = 1 ]; then
 	--exclude .local/share/commhistory \
 	--exclude .local/share/dbus-1 \
 	--exclude .local/share/gsettings-data-convert \
-	--exclude .local/share/maliit-server \
-	--exclude .local/share/org.sailfishos \
+        --exclude .local/share/maliit-server \
 	--exclude .local/share/system \
 	--exclude .local/share/systemd \
 	--exclude .local/share/telepathy \
@@ -84,6 +85,18 @@ if [ "$videos" = 1 ]; then
 	echo "VIDEOS BACKUP..."
 	# copy videos folder into working dir
         rsync -av --progress Videos $tmp
+fi
+
+if [ "$calls" = 1 ]; then
+        echo "CALL HISTORY BACKUP..."
+        # dump call history into working dir
+        commhistory-tool export -calls $tmp/calls.dat
+fi
+
+if [ "$messages" = 1 ]; then
+        echo "MESSAGES BACKUP..."
+        # dump messages into working dir
+        commhistory-tool export -groups $tmp/groups.dat
 fi
 
 tar -cf $name.mydatatransfer $tmp

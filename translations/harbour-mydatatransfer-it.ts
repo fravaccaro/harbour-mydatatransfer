@@ -130,6 +130,14 @@
         <source>The backup file will be saved in the SD card.</source>
         <translation>Il file di backup sarà salvato nella scheda SD.</translation>
     </message>
+    <message>
+        <source>Call history</source>
+        <translation>Registro chiamate</translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation>Messaggi</translation>
+    </message>
 </context>
 <context>
     <name>MainPage</name>
@@ -207,6 +215,14 @@
     <message>
         <source>Select a backup file and choose what to restore.</source>
         <translation>Seleziona un file di backup e scegli cosa ripristinare.</translation>
+    </message>
+    <message>
+        <source>Call history</source>
+        <translation>Registro chiamate</translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation>Messaggi</translation>
     </message>
 </context>
 <context>
@@ -298,6 +314,14 @@
     <message>
         <source>Transfer settings and files from a another device.</source>
         <translation>Trasferisci impostazioni e file da un altro dispositivo.</translation>
+    </message>
+    <message>
+        <source>Call history</source>
+        <translation>Registro chiamate</translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation>Messaggi</translation>
     </message>
 </context>
 </TS>

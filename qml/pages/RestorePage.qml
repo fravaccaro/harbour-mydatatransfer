@@ -86,6 +86,8 @@ Page
     property alias musicRestore: itsmusicrestore.checked
     property alias picturesRestore: itspicturesrestore.checked
     property alias videosRestore: itsvideosrestore.checked
+    property alias callsRestore: itscallsrestore.checked
+    property alias messagesRestore: itsmessagesrestore.checked
     property string selectedBackupFile
     property string selectedBackupFilePath
 
@@ -147,6 +149,24 @@ Page
             }
 
             IconTextSwitch {
+                id: itscallsrestore
+                checked: true
+                automaticCheck: true
+                enabled: selectedBackupFile
+                text: qsTr("Call history")
+                onClicked: { callsRestore = itscallsrestore.checked }
+            }
+
+            IconTextSwitch {
+                id: itsmessagesrestore
+                checked: true
+                automaticCheck: true
+                enabled: selectedBackupFile
+                text: qsTr("Messages")
+                onClicked: { messagesRestore = itsmessagesrestore.checked }
+            }
+
+            IconTextSwitch {
                 id: itsdocumentsrestore
                 checked: true
                 automaticCheck: true
@@ -194,11 +214,11 @@ Page
            Button {
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Restore")
-               enabled: (selectedBackupFile) && (appsRestore || documentsRestore || downloadsRestore || musicRestore || picturesRestore || videosRestore)
+               enabled: (selectedBackupFile) && (appsRestore || callsRestore || messagesRestore || downloadsRestore || musicRestore || picturesRestore || videosRestore)
                onClicked: {
                    remorsepopup.execute(qsTr("Restoring backup"), function() {
                        settings.isRunning = true;
-                       mydatatransfer.restore(selectedBackupFilePath, appsRestore, documentsRestore, downloadsRestore, musicRestore, picturesRestore, videosRestore);
+                       mydatatransfer.restore(selectedBackupFilePath, appsRestore, documentsRestore, downloadsRestore, musicRestore, picturesRestore, videosRestore, callsRestore, messagesRestore);
                    });
                }
            }

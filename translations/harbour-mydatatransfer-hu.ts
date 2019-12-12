@@ -130,6 +130,14 @@
         <source>The backup file will be saved in the SD card.</source>
         <translation>A mentésfájl az SD-kártyára fog kerülni.</translation>
     </message>
+    <message>
+        <source>Call history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainPage</name>
@@ -207,6 +215,14 @@
     <message>
         <source>Select a backup file and choose what to restore.</source>
         <translation>Válassz egy mentésfájlt, és hogy mit szeretnél visszaállítani.</translation>
+    </message>
+    <message>
+        <source>Call history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -298,6 +314,14 @@
     <message>
         <source>Transfer settings and files from a another device.</source>
         <translation>Vidd át a beállításokat és fájlokat egy másik készülékről.</translation>
+    </message>
+    <message>
+        <source>Call history</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Messages</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

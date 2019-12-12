@@ -85,7 +85,7 @@ Page
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeSmall
-                text: "My Data Transfer 0.0.4" }
+                text: "My Data Transfer 0.0.6" }
 
             LabelText {
                 text: qsTr("Backup and transfer app data, documents, music, pictures and videos on your Sailfish OS devices.")
@@ -152,6 +152,11 @@ Page
               SectionHeader { text: qsTr("Translations") }
 
               DetailItem {
+                  label: "Deutsch"
+                  value: "drosjesjaafoer"
+              }
+
+              DetailItem {
                   label: "Italiano"
                   value: "Francesco Vaccaro"
               }
@@ -174,6 +179,11 @@ Page
               DetailItem {
                   label: "Svenska"
                   value: "Åke Engelbrektson"
+              }
+
+              DetailItem {
+                  label: "Zhōngwén (Chinese)"
+                  value: "rui kon"
               }
 
             Item {
