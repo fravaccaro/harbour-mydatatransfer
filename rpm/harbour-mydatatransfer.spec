@@ -14,7 +14,7 @@ Name:       harbour-mydatatransfer
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:        My Data Transfer
 Version:        0.0.6
-Release:        1
+Release:        3
 Group:          Qt/Qt
 License:        GPLv3
 Packager:       fravaccaro <fravaccaro@jollacommunity.it>

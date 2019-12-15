@@ -186,6 +186,18 @@ Page
                   value: "rui kon"
               }
 
+              LabelText {
+                  text: qsTr("Request a new language or contribute to existing languages on the Transifex project page.")
+              }
+
+            LabelSpacer { }
+
+              Button {
+                  anchors.horizontalCenter: parent.horizontalCenter
+                  text: qsTr("Transifex")
+                  onClicked: Qt.openUrlExternally("https://www.transifex.com/fravaccaro/my-data-transfer")
+              }
+
             Item {
                 width: parent.width
                 height: Theme.paddingLarge

@@ -67,6 +67,14 @@
         <source>Thanks to flypigahoy for his ispiring blog post about copying settings and files over a new device.</source>
         <translation>感谢 flypigahoy  关于在新设备上复制设置数据及文件的启发博客文章。</translation>
     </message>
+    <message>
+        <source>Request a new language or contribute to existing languages on the Transifex project page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transifex</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BackupPage</name>
@@ -132,11 +140,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>通话历史</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>消息</translation>
     </message>
 </context>
 <context>
@@ -218,11 +226,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>通话历史</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>消息</translation>
     </message>
 </context>
 <context>
@@ -317,11 +325,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>通话历史</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>消息</translation>
     </message>
 </context>
 </TS>

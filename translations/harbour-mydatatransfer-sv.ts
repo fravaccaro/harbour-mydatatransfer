@@ -67,6 +67,14 @@
         <source>Thanks to flypigahoy for his ispiring blog post about copying settings and files over a new device.</source>
         <translation>Tack till flypigahoy för hans inspirerande bloggpost om kopiering av inställningar och filer till en ny enhet.</translation>
     </message>
+    <message>
+        <source>Request a new language or contribute to existing languages on the Transifex project page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transifex</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BackupPage</name>
@@ -132,11 +140,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>Samtalshistorik</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Meddelanden</translation>
     </message>
 </context>
 <context>
@@ -218,11 +226,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>Samtalshistorik</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Meddelanden</translation>
     </message>
 </context>
 <context>
@@ -317,11 +325,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>Samtalshistorik</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Meddelanden</translation>
     </message>
 </context>
 </TS>

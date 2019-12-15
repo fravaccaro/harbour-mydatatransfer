@@ -5,7 +5,7 @@
     <name>AboutPage</name>
     <message>
         <source>Released under the &lt;a href=&apos;https://www.gnu.org/licenses/gpl-3.0&apos;&gt;GNU GPLv3&lt;/a&gt; license.</source>
-        <translation>Выпущен под лицензией &lt;a href=&apos;https://www.gnu.org/licenses/gpl-3.0&apos;&gt;GNU GPLv3&lt;/a&gt;</translation>
+        <translation>Выпущено по лицензии &lt;a href=&apos;https://www.gnu.org/licenses/gpl-3.0&apos;&gt;GNU GPLv3&lt;/a&gt;</translation>
     </message>
     <message>
         <source>Sources</source>
@@ -41,11 +41,11 @@
     </message>
     <message>
         <source>Keyboard navigation based on &lt;a href=&apos;https://github.com/Wunderfitz/harbour-piepmatz&apos;&gt;Piepmatz&lt;/a&gt; by Sebastian Wolf.</source>
-        <translation>Клавиатурная навигация на основе &lt;a href=&apos;https://github.com/Wunderfitz/harbour-piepmatz&apos;&gt;Piepmatz&lt;/a&gt; от Sebastian Wolf.</translation>
+        <translation>Клавиатурная навигация на основе &lt;a href=&apos;https://github.com/Wunderfitz/harbour-piepmatz&apos;&gt;Piepmatz&lt;/a&gt;от Sebastian Wolf.</translation>
     </message>
     <message>
         <source>Iconography by</source>
-        <translation>Разработчик иконок</translation>
+        <translation>Графика иконок от</translation>
     </message>
     <message>
         <source>Thanks to all the testers for being brave and patient.</source>
@@ -57,15 +57,23 @@
     </message>
     <message>
         <source>About My Data Transfer</source>
-        <translation>О приложении Data Transfer</translation>
+        <translation>О приложении My Data Transfer</translation>
     </message>
     <message>
         <source>Backup and transfer app data, documents, music, pictures and videos on your Sailfish OS devices.</source>
-        <translation>Резервное копирование и передача данных приложений, документов, музыки, изображений и видео на устройства с  SailfishOS.</translation>
+        <translation>Резервное копирование и передача данных приложений, документов, музыки, изображений и видео на устройствах под управлением Sailfish OS.</translation>
     </message>
     <message>
         <source>Thanks to flypigahoy for his ispiring blog post about copying settings and files over a new device.</source>
         <translation>Спасибо flypigahoy за его пост в блоге о копировании настроек и файлов на новое устройство.</translation>
+    </message>
+    <message>
+        <source>Request a new language or contribute to existing languages on the Transifex project page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transifex</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -80,7 +88,7 @@
     </message>
     <message>
         <source>App data</source>
-        <translation>Данные приложения</translation>
+        <translation>Данные приложений</translation>
     </message>
     <message>
         <source>Documents</source>
@@ -132,11 +140,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>История звонков</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Сообщения</translation>
     </message>
 </context>
 <context>
@@ -178,7 +186,7 @@
     </message>
     <message>
         <source>None</source>
-        <translation>Отмена</translation>
+        <translation>Не выбран</translation>
     </message>
     <message>
         <source>Select backup</source>
@@ -186,7 +194,7 @@
     </message>
     <message>
         <source>App data</source>
-        <translation>Данные приложения</translation>
+        <translation>Данные приложений</translation>
     </message>
     <message>
         <source>Documents</source>
@@ -210,7 +218,7 @@
     </message>
     <message>
         <source>Restoring backup</source>
-        <translation>Восстановление резервной копии</translation>
+        <translation>Восстановление из резервной копии</translation>
     </message>
     <message>
         <source>Select a backup file and choose what to restore.</source>
@@ -218,11 +226,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>История звонков</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Сообщения</translation>
     </message>
 </context>
 <context>
@@ -249,7 +257,7 @@
     </message>
     <message>
         <source>App data</source>
-        <translation>Данные приложения</translation>
+        <translation>Данные приложений</translation>
     </message>
     <message>
         <source>Documents</source>
@@ -317,11 +325,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>История звонков</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Сообщения</translation>
     </message>
 </context>
 </TS>

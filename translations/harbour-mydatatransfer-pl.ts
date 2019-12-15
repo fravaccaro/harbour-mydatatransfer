@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="pl_PL">
+<TS version="2.1" language="pl">
 <context>
     <name>AboutPage</name>
     <message>
@@ -67,6 +67,14 @@
         <source>Thanks to flypigahoy for his ispiring blog post about copying settings and files over a new device.</source>
         <translation>Podziękowania dla flypigahoy za jego inspirujący post na blogu o kopiowaniu ustawień i plików na nowym urządzeniu.</translation>
     </message>
+    <message>
+        <source>Request a new language or contribute to existing languages on the Transifex project page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transifex</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BackupPage</name>
@@ -132,11 +140,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>Historia połączeń</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiadomości</translation>
     </message>
 </context>
 <context>
@@ -218,11 +226,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>Historia połączeń</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiadomości</translation>
     </message>
 </context>
 <context>
@@ -317,11 +325,11 @@
     </message>
     <message>
         <source>Call history</source>
-        <translation type="unfinished"></translation>
+        <translation>Historia połączeń</translation>
     </message>
     <message>
         <source>Messages</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiadomości</translation>
     </message>
 </context>
 </TS>

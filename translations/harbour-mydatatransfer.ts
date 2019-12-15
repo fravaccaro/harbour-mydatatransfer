@@ -67,6 +67,14 @@
         <source>Thanks to flypigahoy for his ispiring blog post about copying settings and files over a new device.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Request a new language or contribute to existing languages on the Transifex project page.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Transifex</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>BackupPage</name>
