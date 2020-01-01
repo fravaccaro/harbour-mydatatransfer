@@ -87,6 +87,7 @@ Page
     }
     property int transferMode: -1
     property alias appsTransfer: itsappstransfer.checked
+    property alias appdataTransfer: itsappdatatransfer.checked
     property alias documentsTransfer: itsdocumentstransfer.checked
     property alias downloadsTransfer: itsdownloadstransfer.checked
     property alias musicTransfer: itsmusictransfer.checked
@@ -121,10 +122,12 @@ Page
 
            PageHeader { title: qsTr("Transfer") }
 
+              SectionHeader { text: qsTr("Transfer mode") }
+
            ComboBox {
                id: cbxtransfermode
                width: parent.width
-               label: qsTr("Transfer mode")
+               label: qsTr("Mode")
                description: switch(transferMode) {
                    default:
                        return qsTr("Select whether transferring from or to another device.");
@@ -154,7 +157,7 @@ Page
 
            LabelText {
                visible: transferMode === 0
-               text: qsTr("NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.")
+               text: qsTr("NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option. App transferring requires an internet connection and may take a while.")
            }
 
            LabelText {
@@ -191,15 +194,29 @@ Page
                EnterKey.onClicked: focus = false
            }
 
+              SectionHeader { text: qsTr("Applications"); enabled: mydatatransfer.hasSshpassInstalled() }
+
             IconTextSwitch {
                 visible: transferMode === 0
                 enabled: mydatatransfer.hasSshpassInstalled()
                 id: itsappstransfer
                 checked: true
                 automaticCheck: true
-                text: qsTr("App data")
+                text: qsTr("Apps")
                 onClicked: { appsTransfer = itsappstransfer.checked }
             }
+
+            IconTextSwitch {
+                visible: transferMode === 0
+                enabled: mydatatransfer.hasSshpassInstalled()
+                id: itsappdatatransfer
+                checked: true
+                automaticCheck: true
+                text: qsTr("App data")
+                onClicked: { appdataTransfer = itsappdatatransfer.checked }
+            }
+
+              SectionHeader { text: qsTr("Comunication"); enabled: mydatatransfer.hasSshpassInstalled() }
 
             IconTextSwitch {
                 visible: transferMode === 0
@@ -220,6 +237,8 @@ Page
                 text: qsTr("Messages")
                 onClicked: { messagesTransfer = itsmessagestransfer.checked }
             }
+
+              SectionHeader { text: qsTr("Files"); enabled: mydatatransfer.hasSshpassInstalled() }
 
             IconTextSwitch {
                 visible: transferMode === 0
@@ -273,13 +292,13 @@ Page
 
            Button {
                visible: transferMode === 0
-               enabled: ( mydatatransfer.hasSshpassInstalled() && ipAddress.acceptableInput ) && ( passwordField.text.length > 0 ) && (appsTransfer ||  callsTransfer || messagesTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer)
+               enabled: ( mydatatransfer.hasSshpassInstalled() && ipAddress.acceptableInput ) && ( passwordField.text.length > 0 ) && (appsTransfer || appdataTransfer ||  callsTransfer || messagesTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer)
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Transfer")
                onClicked: {
                    remorsepopup.execute(qsTr("Transferring"), function() {
                        settings.isRunning = true;
-                       mydatatransfer.transfer(ipAddress.text, passwordField.text, appsTransfer, documentsTransfer, downloadsTransfer, musicTransfer, picturesTransfer, videosTransfer, callsTransfer, messagesTransfer);
+                       mydatatransfer.transfer(ipAddress.text, passwordField.text, appsTransfer, appdataTransfer, callsTransfer, messagesTransfer, documentsTransfer, downloadsTransfer, musicTransfer, picturesTransfer, videosTransfer);
                    });
                }
            }

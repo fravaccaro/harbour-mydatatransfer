@@ -2,13 +2,13 @@
 
 name=$1
 apps=$2
-documents=$3
-downloads=$4
-music=$5
-pictures=$6
-videos=$7
-calls=$8
-messages=$9
+calls=$3
+messages=$4
+documents=$5
+downloads=$6
+music=$7
+pictures=$8
+videos=$9
 tmp=mydatatransfer
 
 echo "RESTORING MYDATATRANSFER BACKUP..."

@@ -1,72 +1,66 @@
 #!/bin/bash
 
-name=$1
+file=$1
 apps=$2
 appdata=$3
-documents=$4
-downloads=$5
-music=$6
-pictures=$7
-videos=$8
-calls=$9
-messages=${10}
+calls=$4
+messages=$5
+documents=$6
+downloads=$7
+music=$8
+pictures=$9
+videos=${10}
 tmp=mydatatransfer
 
-echo "RESTORING MYDATATRANSFER BACKUP..."
+echo "restoring backup..."
 
-if [[ ! -n $(tar -tf $name | grep mdt01) ]]; then
+if [[ ! -n $(tar -tf $file | grep mdt01) ]]; then
     /usr/share/harbour-mydatatransfer/scripts/restore_legacy.sh
 fi
 
-cd ~
+cd /home/nemo
 
 if [ "$apps" = 1 ]; then
-	echo "APP DATA RESTORING..."
-	# restore config and local folders
-        tar -xf $name $tmp/.config && tar --strip-components=1 -xvf $name $tmp/.local
+	echo "app data restoring..."
+        tar -xf $file $tmp/.config && tar --strip-components=1 -xvf $file $tmp/.local
 fi
 
 if [ "$documents" = 1 ]; then
-	echo "DOCUMENTS RESTORING..."
-	# restore documents
-        tar -xf $name $tmp/Documents
+	echo "documents restoring..."
+        tar -xf $file $tmp/Documents
 fi
 
 if [ "$downloads" = 1 ]; then
-	echo "DOWLOADS RESTORING..."
-	# restore downloads
-        tar -xf $name $tmp/Downloads
+	echo "downloads restoring..."
+        tar -xf $file $tmp/Downloads
 fi
 
 if [ "$music" = 1 ]; then
-	echo "MUSIC RESTORING..."
-	# restore music
-        tar -xf $name $tmp/Music
+	echo "music restoring.."
+        tar -xf $file $tmp/Music
 fi
 
 if [ "$pictures" = 1 ]; then
-	echo "PICTURES RESTORING..."
-	# restore pictures
-        tar -xf $name $tmp/Pictures
+	echo "pictures restoring..."
+        tar -xf $file $tmp/Pictures
 fi
 
 if [ "$videos" = 1 ]; then
-	echo "VIDEOS RESTORING..."
-	# restore videos
-        tar -xf $name $tmp/Videos
+	echo "videos restoring..."
+        tar -xf $file $tmp/Videos
 fi
 
 if [ "$calls" = 1 ]; then
-        echo "CALL HISTORY RESTORING..."
-        tar --strip-components=1 -xf $name $tmp/calls.dat
+        echo "call log restoring..."
+        tar --strip-components=1 -xf $file $tmp/calls.dat
         commhistory-tool import calls.dat
         pkill voicecall-ui
         rm calls.dat
 fi
 
 if [ "$messages" = 1 ]; then
-        echo "MESSAGES RESTORING..."
-        tar --strip-components=1 -xf $name $tmp/groups.dat
+        echo "messages restoring..."
+        tar --strip-components=1 -xf $file $tmp/groups.dat
         commhistory-tool import groups.dat
         pkill jolla-messages
         rm groups.dat

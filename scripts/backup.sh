@@ -4,23 +4,23 @@ name=$(date +%Y%m%d%H%M)
 destination=$1
 apps=$2
 appdata=$3
-documents=$4
-downloads=$5
-music=$6
-pictures=$7
-videos=$8
-calls=$9
-messages=${10}
+calls=$4
+messages=$5
+documents=$6
+downloads=$7
+music=$8
+pictures=$9
+videos=${10}
 tmp=mydatatransfer
 if [ "$destination" = 1 ]; then
     folder=/media/sdcard/$(ls /media/sdcard)
 else
-    folder=~
+    folder=/home/nemo
 fi
 
-echo "CREATING MYDATATRANSFER BACKUP..."
+echo "creating backup..."
 
-cd ~
+cd /home/nemo
 mkdir -p $tmp
 touch $tmp/list.txt
 
@@ -64,39 +64,33 @@ if [ "$documents" = 1 ]; then
 fi
 
 if [ "$downloads" = 1 ]; then
-	echo "DOWLOADS BACKUP..."
-	# copy downloads folder into working dir
+	echo "downloads backup..."
         echo "Downloads" >> $tmp/list.txt
 fi
 
 if [ "$music" = 1 ]; then
-	echo "MUSIC BACKUP..."
-	# copy music folder into working dir
+	echo "music backup..."
         echo "Music" >> $tmp/list.txt
 fi
 
 if [ "$pictures" = 1 ]; then
-	echo "PICTURES BACKUP..."
-	# copy music folder into working dir
+	echo "pictures backup..."
         echo "Pictures" >> $tmp/list.txt
 fi
 
 if [ "$videos" = 1 ]; then
-	echo "VIDEOS BACKUP..."
-	# copy videos folder into working dir
+	echo "videos backup..."
         echo "Videos" >> $tmp/list.txt
 fi
 
 if [ "$calls" = 1 ]; then
-        echo "CALL LOG BACKUP..."
-        # dump call log into working dir
+        echo "call log backup..."
         commhistory-tool export -calls $tmp/calls.dat
         echo $tmp/calls.dat >> $tmp/list.txt
 fi
 
 if [ "$messages" = 1 ]; then
-        echo "MESSAGES BACKUP..."
-        # dump messages into working dir
+        echo "messages backup..."
         commhistory-tool export -groups $tmp/groups.dat
         echo $tmp/groups.dat >> $tmp/list.txt
 fi

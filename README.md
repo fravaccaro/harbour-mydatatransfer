@@ -35,9 +35,14 @@ Request a new language or contribute to existing languages on the [Transifex pro
 
 Builds available [here](https://openrepos.net/content/fravaccaro/my-data-transfer).
 
+## Roadmap
+
+Roadmap and features will be tracked on the [Trello dashboard](https://trello.com/b/xQd7yDch/my-data-transfer).
+
 ## Credits
 
 * Thanks to flypigahoy for his ispiring blog post about copying settings and files over a new device.
+* Thanks to jgibbon for the icon and the cover graphics.
+* Apps backup by topias
 * Keyboard navigation based on [Piepmatz](https://github.com/Wunderfitz/harbour-piepmatz) by Sebastian Wolf.
-* Iconography by [Retinaicons](https://www.flaticon.com/authors/retinaicons).
 * Thanks to all the testers for being brave and patient.

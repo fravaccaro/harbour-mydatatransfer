@@ -81,6 +81,7 @@ Page
         } ]
     }
     property alias appsRestore: itsappsrestore.checked
+    property alias appdataRestore: itsappdatarestore.checked
     property alias documentsRestore: itsdocumentsrestore.checked
     property alias downloadsRestore: itsdownloadsrestore.checked
     property alias musicRestore: itsmusicrestore.checked
@@ -118,8 +119,10 @@ Page
            PageHeader { title: qsTr("Restore") }
 
            LabelText {
-               text: qsTr("Select a backup file and choose what to restore.")
+               text: qsTr("What do you want to restore?")
            }
+
+              SectionHeader { text: qsTr("Position") }
 
            ValueButton {
                label: qsTr("File")
@@ -139,14 +142,27 @@ Page
                }
            }
 
+              SectionHeader { text: qsTr("Applications") }
+
             IconTextSwitch {
                 id: itsappsrestore
                 checked: true
                 automaticCheck: true
                 enabled: selectedBackupFile
-                text: qsTr("App data")
+                text: qsTr("Apps")
                 onClicked: { appsRestore = itsappsrestore.checked }
             }
+
+            IconTextSwitch {
+                id: itsappdatarestore
+                checked: true
+                automaticCheck: true
+                enabled: selectedBackupFile
+                text: qsTr("App data")
+                onClicked: { appdataRestore = itsappdatarestore.checked }
+            }
+
+              SectionHeader { text: qsTr("Comunication") }
 
             IconTextSwitch {
                 id: itscallsrestore
@@ -165,6 +181,8 @@ Page
                 text: qsTr("Messages")
                 onClicked: { messagesRestore = itsmessagesrestore.checked }
             }
+
+              SectionHeader { text: qsTr("Files") }
 
             IconTextSwitch {
                 id: itsdocumentsrestore
@@ -211,14 +229,17 @@ Page
                 onClicked: { videosRestore = itsvideosrestore.checked }
             }
 
+           LabelText {
+               text: qsTr("NOTE: app restoring requires an internet connection and may take a while.")
+
            Button {
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Restore")
-               enabled: (selectedBackupFile) && (appsRestore || callsRestore || messagesRestore || downloadsRestore || musicRestore || picturesRestore || videosRestore)
+               enabled: (selectedBackupFile) && (appsRestore || appdataRestore || callsRestore || messagesRestore || downloadsRestore || musicRestore || picturesRestore || videosRestore)
                onClicked: {
                    remorsepopup.execute(qsTr("Restoring backup"), function() {
                        settings.isRunning = true;
-                       mydatatransfer.restore(selectedBackupFilePath, appsRestore, documentsRestore, downloadsRestore, musicRestore, picturesRestore, videosRestore, callsRestore, messagesRestore);
+                       mydatatransfer.restore(selectedBackupFilePath, appsRestore, appdataRestore, callsRestore, messagesRestore, documentsRestore, downloadsRestore, musicRestore, picturesRestore, videosRestore);
                    });
                }
            }

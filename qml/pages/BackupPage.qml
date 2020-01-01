@@ -81,6 +81,7 @@ Page
     }
     property int backupDestination: 0
     property alias appsBackup: itsappsbackup.checked
+    property alias appdataBackup: itsappdatabackup.checked
     property alias documentsBackup: itsdocumentsbackup.checked
     property alias downloadsBackup: itsdownloadsbackup.checked
     property alias musicBackup: itsmusicbackup.checked
@@ -116,8 +117,10 @@ Page
            PageHeader { title: qsTr("Backup") }
 
            LabelText {
-               text: qsTr("Choose what to backup and where.")
+               text: qsTr("What do you want to backup?")
            }
+
+              SectionHeader { text: qsTr("Position") }
 
            ComboBox {
                id: cbxmemory
@@ -144,13 +147,25 @@ Page
                }
            }
 
+              SectionHeader { text: qsTr("Applications") }
+
+            IconTextSwitch {
+                id: itsappsbackup
+                checked: true
+                automaticCheck: true
+                text: qsTr("Apps")
+                onClicked: { appsBackup = itsappsbackup.checked }
+            }
+
             IconTextSwitch {
                 id: itsappsbackup
                 checked: true
                 automaticCheck: true
                 text: qsTr("App data")
-                onClicked: { appsBackup = itsappsbackup.checked }
+                onClicked: { appdataBackup = itsappsbackup.checked }
             }
+
+              SectionHeader { text: qsTr("Comunication") }
 
             IconTextSwitch {
                 id: itscallsbackup
@@ -167,6 +182,8 @@ Page
                 text: qsTr("Messages")
                 onClicked: { messagesBackup = itsmessagesbackup.checked }
             }
+
+              SectionHeader { text: qsTr("Files") }
 
             IconTextSwitch {
                 id: itsdocumentsbackup
@@ -209,13 +226,13 @@ Page
             }
 
            Button {
-               enabled: (appsBackup || callsBackup || messagesBackup || documentsBackup || downloadsBackup || musicBackup || picturesBackup || videosBackup)
+               enabled: (appsBackup || appdataBackup || callsBackup || messagesBackup || documentsBackup || downloadsBackup || musicBackup || picturesBackup || videosBackup)
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Backup")
                onClicked: {
                    remorsepopup.execute(qsTr("Backuping"), function() {
                        settings.isRunning = true;
-                       mydatatransfer.backup(appsBackup, documentsBackup, downloadsBackup, musicBackup, picturesBackup, videosBackup, callsBackup, messagesBackup, backupDestination);
+                       mydatatransfer.backup(backupDestination, appsBackup, appdataBackup, callsBackup, messagesBackup, documentsBackup, downloadsBackup, musicBackup, picturesBackup, videosBackup);
                    });
                }
            }

@@ -138,11 +138,15 @@ Page
                }
 
               LabelText {
-                  text: qsTr("Keyboard navigation based on <a href='https://github.com/Wunderfitz/harbour-piepmatz'>Piepmatz</a> by Sebastian Wolf.")
+                  text: qsTr("Thanks to jgibbon for the icon and the cover graphics.")
                }
 
               LabelText {
-                  text: qsTr("Iconography by") + " <a href='https://www.flaticon.com/authors/retinaicons'>Retinaicons</a>."
+                  text: qsTr("Apps backup by topias.")
+               }
+
+              LabelText {
+                  text: qsTr("Keyboard navigation based on <a href='https://github.com/Wunderfitz/harbour-piepmatz'>Piepmatz</a> by Sebastian Wolf.")
                }
 
               LabelText {
