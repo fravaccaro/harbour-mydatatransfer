@@ -44,10 +44,6 @@
         <translation>键盘导航功能基于 Sebasitian Wolf 开发的 &lt;a href=&apos;https://github.com/Wunderfitz/harbour-piepmatz&apos;&gt;Piepmatz&lt;/a&gt; 。</translation>
     </message>
     <message>
-        <source>Iconography by</source>
-        <translation>图标绘制者为</translation>
-    </message>
-    <message>
         <source>Thanks to all the testers for being brave and patient.</source>
         <translation>感谢所有测试者的勇敢及耐心。</translation>
     </message>
@@ -73,6 +69,14 @@
     </message>
     <message>
         <source>Transifex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thanks to jgibbon for the icon and the cover graphics.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps backup by topias.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -115,10 +119,6 @@
         <translation>正在备份</translation>
     </message>
     <message>
-        <source>Choose what to backup and where.</source>
-        <translation>选择要备份的东西及位置</translation>
-    </message>
-    <message>
         <source>Save in</source>
         <translation>保存在</translation>
     </message>
@@ -146,16 +146,48 @@
         <source>Messages</source>
         <translation>消息</translation>
     </message>
+    <message>
+        <source>What do you want to backup?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainPage</name>
     <message>
         <source>About</source>
         <translation>关于</translation>
-    </message>
-    <message>
-        <source>My Data Transfer</source>
-        <translation>My Data Transfer</translation>
     </message>
     <message>
         <source>Backup</source>
@@ -168,6 +200,10 @@
     <message>
         <source>Transfer</source>
         <translation>传输</translation>
+    </message>
+    <message>
+        <source>My Data Transfer</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -221,16 +257,52 @@
         <translation>正在恢复备份</translation>
     </message>
     <message>
-        <source>Select a backup file and choose what to restore.</source>
-        <translation>选择一个备份文件及要恢复的东西。</translation>
-    </message>
-    <message>
         <source>Call history</source>
         <translation>通话历史</translation>
     </message>
     <message>
         <source>Messages</source>
         <translation>消息</translation>
+    </message>
+    <message>
+        <source>What do you want to restore?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NOTE: app restoring requires an internet connection and may take a while.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -316,10 +388,6 @@
         <translation>输入你的 IP 地址及密码，然后选择要传输的东西。请确保你的内部存储空间充足，并且两台设备均连接到相同的 WLAN 网络。</translation>
     </message>
     <message>
-        <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
-        <translation>注意：你的两台设备都需要启用开发者模式并且设置 ssh 密码以使用此操作。</translation>
-    </message>
-    <message>
         <source>Transfer settings and files from a another device.</source>
         <translation>从另一台设备接收设置及文件。</translation>
     </message>
@@ -330,6 +398,50 @@
     <message>
         <source>Messages</source>
         <translation>消息</translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App transferring requires an internet connection and may take a while.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

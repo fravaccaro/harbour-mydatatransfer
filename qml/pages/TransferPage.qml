@@ -40,7 +40,7 @@ Page
             event.accepted = true;
         }
 
-        if (event.key === Qt.Key_B) {
+        if (event.key === Qt.Key_C) {
             pageStack.navigateBack();
             event.accepted = true;
         }
@@ -55,7 +55,7 @@ Page
             event.accepted = true;
         }
 
-        if (event.key === Qt.Key_S) {
+        if (event.key === Qt.Key_B) {
             pageStack.push(Qt.resolvedUrl("BackupPage.qml"));
             event.accepted = true;
         }
@@ -87,6 +87,7 @@ Page
     }
     property int transferMode: -1
     property alias appsTransfer: itsappstransfer.checked
+    property alias apporderTransfer: itsappordertransfer.checked
     property alias appdataTransfer: itsappdatatransfer.checked
     property alias documentsTransfer: itsdocumentstransfer.checked
     property alias downloadsTransfer: itsdownloadstransfer.checked
@@ -113,6 +114,44 @@ Page
         contentHeight: content.height
         enabled: !settings.isRunning
         opacity: settings.isRunning ? 0.2 : 1.0
+
+
+        PullDownMenu {
+            visible: transferMode === 0
+            MenuItem {
+               text: qsTr("Deselect all")
+               enabled: (appsTransfer || apporderTransfer || appdataTransfer || callsTransfer || messagesTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer) && mydatatransfer.hasSshpassInstalled()
+               onClicked: {
+                   appsTransfer = false
+                   apporderTransfer = false
+                   appdataTransfer = false
+                   callsTransfer = false
+                   messagesTransfer = false
+                   documentsTransfer = false
+                   downloadsTransfer = false
+                   musicTransfer = false
+                   picturesTransfer = false
+                   videosTransfer = false
+               }
+            }
+
+            MenuItem {
+               text: qsTr("Select all")
+               enabled: (appsTransfer || apporderTransfer || appdataTransfer || callsTransfer || messagesTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer) && mydatatransfer.hasSshpassInstalled()
+               onClicked: {
+                   appsTransfer = true
+                   apporderTransfer = true
+                   appdataTransfer = true
+                   callsTransfer = true
+                   messagesTransfer = true
+                   documentsTransfer = true
+                   downloadsTransfer = true
+                   musicTransfer = true
+                   picturesTransfer = true
+                   videosTransfer = true
+               }
+            }
+        }
 
         Column
         {
@@ -157,7 +196,12 @@ Page
 
            LabelText {
                visible: transferMode === 0
-               text: qsTr("NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option. App transferring requires an internet connection and may take a while.")
+               text: qsTr("NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.")
+           }
+
+           LabelText {
+               visible: false
+               text: qsTr("App transferring requires an internet connection and may take a while.")
            }
 
            LabelText {
@@ -194,10 +238,10 @@ Page
                EnterKey.onClicked: focus = false
            }
 
-              SectionHeader { text: qsTr("Applications"); enabled: mydatatransfer.hasSshpassInstalled() }
+              SectionHeader { text: qsTr("Applications"); visible: transferMode === 0 }
 
             IconTextSwitch {
-                visible: transferMode === 0
+                visible: false
                 enabled: mydatatransfer.hasSshpassInstalled()
                 id: itsappstransfer
                 checked: true
@@ -216,7 +260,17 @@ Page
                 onClicked: { appdataTransfer = itsappdatatransfer.checked }
             }
 
-              SectionHeader { text: qsTr("Comunication"); enabled: mydatatransfer.hasSshpassInstalled() }
+            IconTextSwitch {
+                visible: transferMode === 0
+                enabled: mydatatransfer.hasSshpassInstalled()
+                id: itsappordertransfer
+                checked: true
+                automaticCheck: true
+                text: qsTr("App order")
+                onClicked: { apporderTransfer = itsappordertransfer.checked }
+            }
+
+              SectionHeader { text: qsTr("Communication"); visible: transferMode === 0 }
 
             IconTextSwitch {
                 visible: transferMode === 0
@@ -238,7 +292,7 @@ Page
                 onClicked: { messagesTransfer = itsmessagestransfer.checked }
             }
 
-              SectionHeader { text: qsTr("Files"); enabled: mydatatransfer.hasSshpassInstalled() }
+              SectionHeader { text: qsTr("Files"); visible: transferMode === 0 }
 
             IconTextSwitch {
                 visible: transferMode === 0
@@ -259,6 +313,8 @@ Page
                 text: qsTr("Downloads")
                 onClicked: { downloadsTransfer = itsdownloadstransfer.checked }
             }
+
+            SectionHeader { text: qsTr("Media"); visible: transferMode === 0 }
 
             IconTextSwitch {
                 visible: transferMode === 0
@@ -292,13 +348,13 @@ Page
 
            Button {
                visible: transferMode === 0
-               enabled: ( mydatatransfer.hasSshpassInstalled() && ipAddress.acceptableInput ) && ( passwordField.text.length > 0 ) && (appsTransfer || appdataTransfer ||  callsTransfer || messagesTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer)
+               enabled: ( mydatatransfer.hasSshpassInstalled() && ipAddress.acceptableInput ) && ( passwordField.text.length > 0 ) && (appsTransfer || apporderTransfer || appdataTransfer ||  callsTransfer || messagesTransfer || documentsTransfer || downloadsTransfer || musicTransfer || picturesTransfer || videosTransfer)
                anchors.horizontalCenter: parent.horizontalCenter
                text: qsTr("Transfer")
                onClicked: {
                    remorsepopup.execute(qsTr("Transferring"), function() {
                        settings.isRunning = true;
-                       mydatatransfer.transfer(ipAddress.text, passwordField.text, appsTransfer, appdataTransfer, callsTransfer, messagesTransfer, documentsTransfer, downloadsTransfer, musicTransfer, picturesTransfer, videosTransfer);
+                       mydatatransfer.transfer(ipAddress.text, passwordField.text, appsTransfer, apporderTransfer, appdataTransfer, callsTransfer, messagesTransfer, documentsTransfer, downloadsTransfer, musicTransfer, picturesTransfer, videosTransfer);
                    });
                }
            }

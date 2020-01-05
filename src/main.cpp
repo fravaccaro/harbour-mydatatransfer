@@ -16,6 +16,7 @@
 
 int main(int argc, char *argv[])
 {
+    qDebug() << setuid(0);
 
     QGuiApplication *app = SailfishApp::application(argc,argv);
     QQuickView *view = SailfishApp::createView();

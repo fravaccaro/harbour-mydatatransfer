@@ -43,7 +43,7 @@ Page
             event.accepted = true;
         }
 
-        if (event.key === Qt.Key_S) {
+        if (event.key === Qt.Key_B) {
             pageStack.push(Qt.resolvedUrl("BackupPage.qml"));
             event.accepted = true;
         }
@@ -74,7 +74,10 @@ Page
             }
         }
 
-           header: PageHeader { title: qsTr("My Data Transfer") }
+           header: PageHeader {
+               // title: mydatatransfer.whoami()
+               title: qsTr("My Data Transfer")
+           }
 
            model: ListModel {
                ListElement {

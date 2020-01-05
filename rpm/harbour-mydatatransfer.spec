@@ -13,15 +13,15 @@ Name:       harbour-mydatatransfer
 %{!?qtc_make:%define qtc_make make}
 %{?qtc_builddir:%define _builddir %qtc_builddir}
 Summary:        My Data Transfer
-Version:        0.0.6
-Release:        3
+Version:        0.0.7
+Release:        2
 Group:          Qt/Qt
 License:        GPLv3
 Packager:       fravaccaro <fravaccaro@jollacommunity.it>
 URL:            https://github.com/fravaccaro/harbour-mydatatransfer
 Source0:        %{name}-%{version}.tar.bz2
 Source100:      harbour-mydatatransfer.yaml
-Requires:       sailfishsilica-qt5 >= 0.10.9, sailfish-version >= 3.2.0, rsync
+Requires:       sailfishsilica-qt5 >= 0.10.9, sailfish-version >= 3.2.0
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
@@ -68,7 +68,7 @@ desktop-file-install --delete-original       \
    %{buildroot}%{_datadir}/applications/*.desktop
 
 %files
-%defattr(-,root,root,-)
+%defattr(4755,root,root,-)
 %{_bindir}
 %{_datadir}/%{name}
 %{_datadir}/applications/%{name}.desktop
@@ -78,3 +78,10 @@ desktop-file-install --delete-original       \
 
 %post
 chmod +x /usr/share/%{name}/scripts/*.sh
+ln -s /usr/share/%{name}/scripts/mydatatransfer.sh /usr/bin/mydatatransfer
+
+%postun
+if [ $1 = 0 ]; then
+        // Uninstallation
+        unlink /usr/bin/mydatatransfer
+fi

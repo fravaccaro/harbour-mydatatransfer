@@ -44,10 +44,6 @@
         <translation>A billentyűzetes navigációnak a Sebastian Wolf által készített &lt;a href=&apos;https://github.com/Wunderfitz/harbour-piepmatz&apos;&gt;Piepmatz&lt;/a&gt; az alapja.</translation>
     </message>
     <message>
-        <source>Iconography by</source>
-        <translation>Ikonográfia</translation>
-    </message>
-    <message>
         <source>Thanks to all the testers for being brave and patient.</source>
         <translation>Köszönet minden tesztelőnek a bátorságért, valamint a türelemért.</translation>
     </message>
@@ -73,6 +69,14 @@
     </message>
     <message>
         <source>Transifex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thanks to jgibbon for the icon and the cover graphics.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps backup by topias.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -115,10 +119,6 @@
         <translation>Mentés folyamatban</translation>
     </message>
     <message>
-        <source>Choose what to backup and where.</source>
-        <translation>Válaszd ki, mit és hova mentenél.</translation>
-    </message>
-    <message>
         <source>Save in</source>
         <translation>Mentés </translation>
     </message>
@@ -146,16 +146,48 @@
         <source>Messages</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>What do you want to backup?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainPage</name>
     <message>
         <source>About</source>
         <translation>Névjegy</translation>
-    </message>
-    <message>
-        <source>My Data Transfer</source>
-        <translation>My Data Transfer</translation>
     </message>
     <message>
         <source>Backup</source>
@@ -168,6 +200,10 @@
     <message>
         <source>Transfer</source>
         <translation>Átvitel</translation>
+    </message>
+    <message>
+        <source>My Data Transfer</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -221,15 +257,51 @@
         <translation>Biztonsági mentés visszaállítása</translation>
     </message>
     <message>
-        <source>Select a backup file and choose what to restore.</source>
-        <translation>Válassz egy mentésfájlt, és hogy mit szeretnél visszaállítani.</translation>
-    </message>
-    <message>
         <source>Call history</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>What do you want to restore?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NOTE: app restoring requires an internet connection and may take a while.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Media</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -316,10 +388,6 @@
         <translation>Add meg az új készülék IP címét és a jelszót, majd válaszd ki mit vinnél át. Bizonyosodj meg róla, hogy van elég tárhelyed a belső memóriában, és, hogy mindkét készüléked ugyanazon a WLAN-hálózaton van.</translation>
     </message>
     <message>
-        <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
-        <translation>MEGJEGYZÉS: ahhoz, hogy ezt a lehetőséget használhasd, a fejlesztő módnak aktívnak kell lennie és egy ssh jelszónak beállítva kell lennie mindkét készülékeden.</translation>
-    </message>
-    <message>
         <source>Transfer settings and files from a another device.</source>
         <translation>Vidd át a beállításokat és fájlokat egy másik készülékről.</translation>
     </message>
@@ -329,6 +397,50 @@
     </message>
     <message>
         <source>Messages</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App transferring requires an internet connection and may take a while.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1,17 +1,18 @@
 #!/bin/bash
 
-name=$(date +%Y%m%d%H%M)
+name=$(date +%Y-%m-%d_%H-%M)
 destination=$1
 apps=$2
-appdata=$3
-calls=$4
-messages=$5
-documents=$6
-downloads=$7
-music=$8
-pictures=$9
-videos=${10}
-tmp=mydatatransfer
+apporder=$3
+appdata=$4
+calls=$5
+messages=$6
+documents=$7
+downloads=$8
+music=$9
+pictures=${10}
+videos=${11}
+tmp=mdt-blobs
 if [ "$destination" = 1 ]; then
     folder=/media/sdcard/$(ls /media/sdcard)
 else
@@ -23,6 +24,17 @@ echo "creating backup..."
 cd /home/nemo
 mkdir -p $tmp
 touch $tmp/list.txt
+
+if [ "$app" = 1 ]; then
+        echo "apps backup..."
+        /usr/share/harbour
+fi
+
+if [ "$apporder" = 1 ]; then
+        echo "app order backup..."
+        cp -p .config/lipstick/applications.menu $tmp/
+        echo $tmp/"applications.menu" >> $tmp/list.txt
+fi
 
 if [ "$appdata" = 1 ]; then
 	echo "app data backup..."
@@ -56,7 +68,6 @@ if [ "$appdata" = 1 ]; then
 	/^\.local\/share\/xt9$/d" \
 	$tmp/list.txt	
 fi
-
 
 if [ "$documents" = 1 ]; then
 	echo "documents backup..."
@@ -100,7 +111,7 @@ touch $tmp/mdt01
 echo $tmp/mdt01 >> $tmp/list.txt
 
 tar -cf $folder/$name.mydatatransfer -T $tmp/list.txt
-
+chown nemo:nemo $folder/$name.mydatatransfer
 rm -rf $tmp
 
-echo "BACKUPED!"
+echo "backuped!"

@@ -44,10 +44,6 @@
         <translation>Клавиатурная навигация на основе &lt;a href=&apos;https://github.com/Wunderfitz/harbour-piepmatz&apos;&gt;Piepmatz&lt;/a&gt;от Sebastian Wolf.</translation>
     </message>
     <message>
-        <source>Iconography by</source>
-        <translation>Графика иконок от</translation>
-    </message>
-    <message>
         <source>Thanks to all the testers for being brave and patient.</source>
         <translation>Спасибо всем тестировщикам за храбрость и терпение.</translation>
     </message>
@@ -73,6 +69,14 @@
     </message>
     <message>
         <source>Transifex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Thanks to jgibbon for the icon and the cover graphics.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps backup by topias.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -115,10 +119,6 @@
         <translation>Резервное копирование</translation>
     </message>
     <message>
-        <source>Choose what to backup and where.</source>
-        <translation>Выберите, что скопировать и где.</translation>
-    </message>
-    <message>
         <source>Save in</source>
         <translation>Сохранить</translation>
     </message>
@@ -146,16 +146,48 @@
         <source>Messages</source>
         <translation>Сообщения</translation>
     </message>
+    <message>
+        <source>What do you want to backup?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainPage</name>
     <message>
         <source>About</source>
         <translation>О приложении</translation>
-    </message>
-    <message>
-        <source>My Data Transfer</source>
-        <translation>My Data Transfer</translation>
     </message>
     <message>
         <source>Backup</source>
@@ -168,6 +200,10 @@
     <message>
         <source>Transfer</source>
         <translation>Передача</translation>
+    </message>
+    <message>
+        <source>My Data Transfer</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -221,16 +257,52 @@
         <translation>Восстановление из резервной копии</translation>
     </message>
     <message>
-        <source>Select a backup file and choose what to restore.</source>
-        <translation>Выберите файл резервной копии и отметьте, что восстановить.</translation>
-    </message>
-    <message>
         <source>Call history</source>
         <translation>История звонков</translation>
     </message>
     <message>
         <source>Messages</source>
         <translation>Сообщения</translation>
+    </message>
+    <message>
+        <source>What do you want to restore?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NOTE: app restoring requires an internet connection and may take a while.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -316,10 +388,6 @@
         <translation>Введите IP-адрес и пароль нового устройства, затем выберите, что передать. Убедитесь, что у вас достаточно свободного места во внутренней памяти и что оба ваших устройства находятся в одной сети WLAN.</translation>
     </message>
     <message>
-        <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
-        <translation>ПРИМЕЧАНИЕ: вам нужно активировать режим разработчика и установить пароль ssh на обоих ваших устройствах, чтобы иметь возможность использовать эту опцию.</translation>
-    </message>
-    <message>
         <source>Transfer settings and files from a another device.</source>
         <translation>Перенос настроек и файлов на другое устройство.</translation>
     </message>
@@ -330,6 +398,50 @@
     <message>
         <source>Messages</source>
         <translation>Сообщения</translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>App transferring requires an internet connection and may take a while.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

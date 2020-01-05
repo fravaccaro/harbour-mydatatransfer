@@ -44,10 +44,6 @@
         <translation>Navigazione via tastiera basata su &lt;a href=&apos;https://github.com/Wunderfitz/harbour-piepmatz&apos;&gt;Piepmatz&lt;/a&gt; di Sebastian Wolf.</translation>
     </message>
     <message>
-        <source>Iconography by</source>
-        <translation>Iconografia di</translation>
-    </message>
-    <message>
         <source>Thanks to all the testers for being brave and patient.</source>
         <translation>Grazie a tutti i tester per il coraggio e la pazienza.</translation>
     </message>
@@ -74,6 +70,14 @@
     <message>
         <source>Transifex</source>
         <translation>Transifex</translation>
+    </message>
+    <message>
+        <source>Thanks to jgibbon for the icon and the cover graphics.</source>
+        <translation>Grazie a jgibbon per la grafica dell&apos;icona e della cover.</translation>
+    </message>
+    <message>
+        <source>Apps backup by topias.</source>
+        <translation>Backup delle app a cura di topias.</translation>
     </message>
 </context>
 <context>
@@ -115,10 +119,6 @@
         <translation>Backup in corso</translation>
     </message>
     <message>
-        <source>Choose what to backup and where.</source>
-        <translation>Scegli di cosa fare il backup e dove.</translation>
-    </message>
-    <message>
         <source>Save in</source>
         <translation>Salva in</translation>
     </message>
@@ -146,16 +146,48 @@
         <source>Messages</source>
         <translation>Messaggi</translation>
     </message>
+    <message>
+        <source>What do you want to backup?</source>
+        <translation>Di cosa vuoi fare il backup?</translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation>Applicazioni</translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation>App</translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation>Comunicazione</translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation>Ordine app</translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation>Deseleziona tutto</translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation>Seleziona tutto</translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation>Media</translation>
+    </message>
 </context>
 <context>
     <name>MainPage</name>
     <message>
         <source>About</source>
         <translation>Info</translation>
-    </message>
-    <message>
-        <source>My Data Transfer</source>
-        <translation>My Data Transfer</translation>
     </message>
     <message>
         <source>Backup</source>
@@ -168,6 +200,10 @@
     <message>
         <source>Transfer</source>
         <translation>Trasferisci</translation>
+    </message>
+    <message>
+        <source>My Data Transfer</source>
+        <translation>My Data Transfer</translation>
     </message>
 </context>
 <context>
@@ -221,16 +257,52 @@
         <translation>Ripristino backup</translation>
     </message>
     <message>
-        <source>Select a backup file and choose what to restore.</source>
-        <translation>Seleziona un file di backup e scegli cosa ripristinare.</translation>
-    </message>
-    <message>
         <source>Call history</source>
         <translation>Registro chiamate</translation>
     </message>
     <message>
         <source>Messages</source>
         <translation>Messaggi</translation>
+    </message>
+    <message>
+        <source>What do you want to restore?</source>
+        <translation>Cosa vuoi ripristinare?</translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation>Applicazioni</translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation>App</translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation>Comunicazione</translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <source>NOTE: app restoring requires an internet connection and may take a while.</source>
+        <translation>NOTA: il ripristino delle app ha bisogno di una connessione ad internet e potrebbe richiedere del tempo.</translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation>Ordine app</translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation>Deseleziona tutto</translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation>Seleziona tutto</translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation>Media</translation>
     </message>
 </context>
 <context>
@@ -316,10 +388,6 @@
         <translation>Inserisci l&apos;indirizzo IP e la password del tuo nuovo dispositivo, quindi scegli cosa trasferire. Assicurati di avere sufficiente momeoria interna libera e che entrambi i tuoi dispositivi siano sulla stessa rete WLAN.</translation>
     </message>
     <message>
-        <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
-        <translation>NOTA: devi avere la modalità sviluppatore attiva e una password ssh impostata su entrambi i tuoi dispositivi per utilizzare questa opzione.</translation>
-    </message>
-    <message>
         <source>Transfer settings and files from a another device.</source>
         <translation>Trasferisci impostazioni e file da un altro dispositivo.</translation>
     </message>
@@ -330,6 +398,50 @@
     <message>
         <source>Messages</source>
         <translation>Messaggi</translation>
+    </message>
+    <message>
+        <source>Mode</source>
+        <translation>Modalità</translation>
+    </message>
+    <message>
+        <source>Applications</source>
+        <translation>Applicazioni</translation>
+    </message>
+    <message>
+        <source>Apps</source>
+        <translation>App</translation>
+    </message>
+    <message>
+        <source>Communication</source>
+        <translation>Comunicazione</translation>
+    </message>
+    <message>
+        <source>Files</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <source>App order</source>
+        <translation>Ordine app</translation>
+    </message>
+    <message>
+        <source>Deselect all</source>
+        <translation>Deseleziona tutto</translation>
+    </message>
+    <message>
+        <source>Select all</source>
+        <translation>Seleziona tutto</translation>
+    </message>
+    <message>
+        <source>Media</source>
+        <translation>Media</translation>
+    </message>
+    <message>
+        <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
+        <translation>NOTA: hai bisogno della modalità sviluppatore attiva e di una password ssh impostata in entrambi i tuoi dispositivi per poter utilizzare questa opzione.</translation>
+    </message>
+    <message>
+        <source>App transferring requires an internet connection and may take a while.</source>
+        <translation>Il trasferimento delle app ha bisogno di una connessione ad internet e potrebbe richiedere del tempo.</translation>
     </message>
 </context>
 </TS>

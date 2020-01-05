@@ -34,7 +34,7 @@ Page
             event.accepted = true;
         }
 
-        if (event.key === Qt.Key_B) {
+        if (event.key === Qt.Key_C) {
             pageStack.navigateBack();
             event.accepted = true;
         }
@@ -44,7 +44,7 @@ Page
             event.accepted = true;
         }
 
-        if (event.key === Qt.Key_S) {
+        if (event.key === Qt.Key_B) {
             pageStack.push(Qt.resolvedUrl("BackupPage.qml"));
             event.accepted = true;
         }
@@ -85,7 +85,7 @@ Page
                 anchors.horizontalCenter: parent.horizontalCenter
                 color: Theme.highlightColor
                 font.pixelSize: Theme.fontSizeSmall
-                text: "My Data Transfer 0.0.6" }
+                text: "My Data Transfer 0.0.7" }
 
             LabelText {
                 text: qsTr("Backup and transfer app data, documents, music, pictures and videos on your Sailfish OS devices.")
@@ -142,6 +142,7 @@ Page
                }
 
               LabelText {
+                  visible: false
                   text: qsTr("Apps backup by topias.")
                }
 
