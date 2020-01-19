@@ -65,19 +65,19 @@
     </message>
     <message>
         <source>Request a new language or contribute to existing languages on the Transifex project page.</source>
-        <translation type="unfinished"></translation>
+        <translation>在 Transifex 项目页面请求新语言或翻译已存在的语言。</translation>
     </message>
     <message>
         <source>Transifex</source>
-        <translation type="unfinished"></translation>
+        <translation>Transifex</translation>
     </message>
     <message>
         <source>Thanks to jgibbon for the icon and the cover graphics.</source>
-        <translation type="unfinished"></translation>
+        <translation>感谢 jgibbon  提供图标及绘制软件封面。</translation>
     </message>
     <message>
         <source>Apps backup by topias.</source>
-        <translation type="unfinished"></translation>
+        <translation>软件备份功能由 topias 开发。</translation>
     </message>
 </context>
 <context>
@@ -148,39 +148,39 @@
     </message>
     <message>
         <source>What do you want to backup?</source>
-        <translation type="unfinished"></translation>
+        <translation>你想备份什么?</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>软件</translation>
     </message>
     <message>
         <source>Apps</source>
-        <translation type="unfinished"></translation>
+        <translation>软件</translation>
     </message>
     <message>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>通讯</translation>
     </message>
     <message>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>文件</translation>
     </message>
     <message>
         <source>App order</source>
-        <translation type="unfinished"></translation>
+        <translation>软件顺序</translation>
     </message>
     <message>
         <source>Deselect all</source>
-        <translation type="unfinished"></translation>
+        <translation>取消全选</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>全选</translation>
     </message>
     <message>
         <source>Media</source>
-        <translation type="unfinished"></translation>
+        <translation>媒体</translation>
     </message>
 </context>
 <context>
@@ -203,7 +203,7 @@
     </message>
     <message>
         <source>My Data Transfer</source>
-        <translation type="unfinished"></translation>
+        <translation>My Data Transfer</translation>
     </message>
 </context>
 <context>
@@ -266,43 +266,43 @@
     </message>
     <message>
         <source>What do you want to restore?</source>
-        <translation type="unfinished"></translation>
+        <translation>你想恢复什么?</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>软件</translation>
     </message>
     <message>
         <source>Apps</source>
-        <translation type="unfinished"></translation>
+        <translation>软件</translation>
     </message>
     <message>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>通讯</translation>
     </message>
     <message>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>文件</translation>
     </message>
     <message>
         <source>NOTE: app restoring requires an internet connection and may take a while.</source>
-        <translation type="unfinished"></translation>
+        <translation>注意：恢复软件需要互联网连接并且需要等待一段时间。</translation>
     </message>
     <message>
         <source>App order</source>
-        <translation type="unfinished"></translation>
+        <translation>软件顺序</translation>
     </message>
     <message>
         <source>Deselect all</source>
-        <translation type="unfinished"></translation>
+        <translation>取消全选</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>全选</translation>
     </message>
     <message>
         <source>Media</source>
-        <translation type="unfinished"></translation>
+        <translation>媒体</translation>
     </message>
 </context>
 <context>
@@ -401,47 +401,47 @@
     </message>
     <message>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>模式</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>软件</translation>
     </message>
     <message>
         <source>Apps</source>
-        <translation type="unfinished"></translation>
+        <translation>软件</translation>
     </message>
     <message>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>通讯</translation>
     </message>
     <message>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>文件</translation>
     </message>
     <message>
         <source>App order</source>
-        <translation type="unfinished"></translation>
+        <translation>软件顺序</translation>
     </message>
     <message>
         <source>Deselect all</source>
-        <translation type="unfinished"></translation>
+        <translation>取消全选</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>全选</translation>
     </message>
     <message>
         <source>Media</source>
-        <translation type="unfinished"></translation>
+        <translation>媒体</translation>
     </message>
     <message>
         <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
-        <translation type="unfinished"></translation>
+        <translation>注意：你的两台设备都需要启用开发者模式并且设置 ssh 密码以使用此操作。</translation>
     </message>
     <message>
         <source>App transferring requires an internet connection and may take a while.</source>
-        <translation type="unfinished"></translation>
+        <translation>注意：软件传输需要互联网连接并且需要等待一段时间。</translation>
     </message>
 </context>
 </TS>

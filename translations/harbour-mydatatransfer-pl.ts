@@ -65,19 +65,19 @@
     </message>
     <message>
         <source>Request a new language or contribute to existing languages on the Transifex project page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Poproś o nowy język lub dołącz do tłumaczy istniejących języków na stronie projektu Transifex.</translation>
     </message>
     <message>
         <source>Transifex</source>
-        <translation type="unfinished"></translation>
+        <translation>Transifex</translation>
     </message>
     <message>
         <source>Thanks to jgibbon for the icon and the cover graphics.</source>
-        <translation type="unfinished"></translation>
+        <translation>Podziękowania dla jgibbon za ikony u grafikę okładki.</translation>
     </message>
     <message>
         <source>Apps backup by topias.</source>
-        <translation type="unfinished"></translation>
+        <translation>Kopia zapasowa aplikacji napisana przez topias.</translation>
     </message>
 </context>
 <context>
@@ -148,39 +148,39 @@
     </message>
     <message>
         <source>What do you want to backup?</source>
-        <translation type="unfinished"></translation>
+        <translation>Czego kopię zapasową byś chciał/a zrobić?</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikacje</translation>
     </message>
     <message>
         <source>Apps</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikacje</translation>
     </message>
     <message>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>Komunikacja</translation>
     </message>
     <message>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pliki</translation>
     </message>
     <message>
         <source>App order</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolejność aplikacji</translation>
     </message>
     <message>
         <source>Deselect all</source>
-        <translation type="unfinished"></translation>
+        <translation>Odznacz wszystkie</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaznacz wszystkie</translation>
     </message>
     <message>
         <source>Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Media</translation>
     </message>
 </context>
 <context>
@@ -203,7 +203,7 @@
     </message>
     <message>
         <source>My Data Transfer</source>
-        <translation type="unfinished"></translation>
+        <translation>My Data Transfer</translation>
     </message>
 </context>
 <context>
@@ -266,43 +266,43 @@
     </message>
     <message>
         <source>What do you want to restore?</source>
-        <translation type="unfinished"></translation>
+        <translation>Co byś chiał/a przywrócić?</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikacje</translation>
     </message>
     <message>
         <source>Apps</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikacje</translation>
     </message>
     <message>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>Komunikacja</translation>
     </message>
     <message>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pliki</translation>
     </message>
     <message>
         <source>NOTE: app restoring requires an internet connection and may take a while.</source>
-        <translation type="unfinished"></translation>
+        <translation>UWAGA: przywracanie aplikacji wymaga połączenia z Internetem i może chwilę potrwać.</translation>
     </message>
     <message>
         <source>App order</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolejność aplikacji</translation>
     </message>
     <message>
         <source>Deselect all</source>
-        <translation type="unfinished"></translation>
+        <translation>Odznacz wszystkie</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaznacz wszystkie</translation>
     </message>
     <message>
         <source>Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Media</translation>
     </message>
 </context>
 <context>
@@ -401,47 +401,47 @@
     </message>
     <message>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Tryb</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikacje</translation>
     </message>
     <message>
         <source>Apps</source>
-        <translation type="unfinished"></translation>
+        <translation>Aplikacje</translation>
     </message>
     <message>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>Komunikacja</translation>
     </message>
     <message>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Pliki</translation>
     </message>
     <message>
         <source>App order</source>
-        <translation type="unfinished"></translation>
+        <translation>Kolejność aplikacji</translation>
     </message>
     <message>
         <source>Deselect all</source>
-        <translation type="unfinished"></translation>
+        <translation>Odznacz wszystkie</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Zaznacz wszystkie</translation>
     </message>
     <message>
         <source>Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Media</translation>
     </message>
     <message>
         <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
-        <translation type="unfinished"></translation>
+        <translation>UWAGA: musisz mieć włączony tryb dewelopera i hasło ssh ustawione na obu urządzeniach, aby móc korzystać z tej opcji.</translation>
     </message>
     <message>
         <source>App transferring requires an internet connection and may take a while.</source>
-        <translation type="unfinished"></translation>
+        <translation>Przesyłanie aplikacji wymaga połączenia z Internetem i może chwilę potrwać.</translation>
     </message>
 </context>
 </TS>

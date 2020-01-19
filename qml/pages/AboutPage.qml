@@ -162,6 +162,11 @@ Page
               }
 
               DetailItem {
+                  label: "Français (France)"
+                  value: "Quentin" + "\n" + "Nico Cartron"
+              }
+
+              DetailItem {
                   label: "Italiano"
                   value: "Francesco Vaccaro"
               }

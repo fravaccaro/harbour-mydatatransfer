@@ -37,7 +37,7 @@
     </message>
     <message>
         <source>Credits</source>
-        <translation>Кредиты</translation>
+        <translation>Признательность</translation>
     </message>
     <message>
         <source>Keyboard navigation based on &lt;a href=&apos;https://github.com/Wunderfitz/harbour-piepmatz&apos;&gt;Piepmatz&lt;/a&gt; by Sebastian Wolf.</source>
@@ -65,19 +65,19 @@
     </message>
     <message>
         <source>Request a new language or contribute to existing languages on the Transifex project page.</source>
-        <translation type="unfinished"></translation>
+        <translation>Запросите новый язык или внесите свой вклад в существующие языки на странице проекта Transifex.</translation>
     </message>
     <message>
         <source>Transifex</source>
-        <translation type="unfinished"></translation>
+        <translation>Transifex</translation>
     </message>
     <message>
         <source>Thanks to jgibbon for the icon and the cover graphics.</source>
-        <translation type="unfinished"></translation>
+        <translation>Спасибо jgibbon за иконку и обложку графики.</translation>
     </message>
     <message>
         <source>Apps backup by topias.</source>
-        <translation type="unfinished"></translation>
+        <translation>Приложение резервное копирование от topias.</translation>
     </message>
 </context>
 <context>
@@ -148,39 +148,39 @@
     </message>
     <message>
         <source>What do you want to backup?</source>
-        <translation type="unfinished"></translation>
+        <translation>Что вы хотите зарезервировать?</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Приложения</translation>
     </message>
     <message>
         <source>Apps</source>
-        <translation type="unfinished"></translation>
+        <translation>Программы</translation>
     </message>
     <message>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>Связь</translation>
     </message>
     <message>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы</translation>
     </message>
     <message>
         <source>App order</source>
-        <translation type="unfinished"></translation>
+        <translation>Порядок приложений</translation>
     </message>
     <message>
         <source>Deselect all</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить выбор всего</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать всё</translation>
     </message>
     <message>
         <source>Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Медиа файлы</translation>
     </message>
 </context>
 <context>
@@ -203,7 +203,7 @@
     </message>
     <message>
         <source>My Data Transfer</source>
-        <translation type="unfinished"></translation>
+        <translation>My Data Transfer</translation>
     </message>
 </context>
 <context>
@@ -266,43 +266,43 @@
     </message>
     <message>
         <source>What do you want to restore?</source>
-        <translation type="unfinished"></translation>
+        <translation>Что вы хотите восстановить?</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Приложения</translation>
     </message>
     <message>
         <source>Apps</source>
-        <translation type="unfinished"></translation>
+        <translation>Программы</translation>
     </message>
     <message>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>Связь</translation>
     </message>
     <message>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы</translation>
     </message>
     <message>
         <source>NOTE: app restoring requires an internet connection and may take a while.</source>
-        <translation type="unfinished"></translation>
+        <translation>ПРИМЕЧАНИЕ: восстановление приложения требует подключения к Интернету и может занять некоторое время.</translation>
     </message>
     <message>
         <source>App order</source>
-        <translation type="unfinished"></translation>
+        <translation>Порядок приложений</translation>
     </message>
     <message>
         <source>Deselect all</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить выбор всего</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать всё</translation>
     </message>
     <message>
         <source>Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Медиа файлы</translation>
     </message>
 </context>
 <context>
@@ -361,7 +361,7 @@
     </message>
     <message>
         <source>Select whether transferring from or to another device.</source>
-        <translation>Выберите, следует ли передавать с или на другое устройство.</translation>
+        <translation>Выберите, следует ли передавать С или На другое устройство.</translation>
     </message>
     <message>
         <source>Transfer settings and files to a another device.</source>
@@ -401,47 +401,47 @@
     </message>
     <message>
         <source>Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Режим</translation>
     </message>
     <message>
         <source>Applications</source>
-        <translation type="unfinished"></translation>
+        <translation>Приложения</translation>
     </message>
     <message>
         <source>Apps</source>
-        <translation type="unfinished"></translation>
+        <translation>Программы</translation>
     </message>
     <message>
         <source>Communication</source>
-        <translation type="unfinished"></translation>
+        <translation>Связь</translation>
     </message>
     <message>
         <source>Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Файлы</translation>
     </message>
     <message>
         <source>App order</source>
-        <translation type="unfinished"></translation>
+        <translation>Порядок приложений</translation>
     </message>
     <message>
         <source>Deselect all</source>
-        <translation type="unfinished"></translation>
+        <translation>Отменить выбор всего</translation>
     </message>
     <message>
         <source>Select all</source>
-        <translation type="unfinished"></translation>
+        <translation>Выбрать всё</translation>
     </message>
     <message>
         <source>Media</source>
-        <translation type="unfinished"></translation>
+        <translation>Медиа файлы</translation>
     </message>
     <message>
         <source>NOTE: you need the developer mode active and an ssh password set on both of your devices in order to be able to use this option.</source>
-        <translation type="unfinished"></translation>
+        <translation>ПРИМЕЧАНИЕ: вам нужно активировать режим разработчика и установить пароль ssh на обоих ваших устройствах, чтобы иметь возможность использовать эту опцию.</translation>
     </message>
     <message>
         <source>App transferring requires an internet connection and may take a while.</source>
-        <translation type="unfinished"></translation>
+        <translation>Передача приложения требует подключения к Интернету и может занять некоторое время.</translation>
     </message>
 </context>
 </TS>
